@@ -2,82 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Earn With AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earn with AI | Zero to $1M</title>
   <style>
-    :root {
-      --bg-color: #0f0f0f;
-      --text-color: #ffffff;
-      --accent-color: #00ffaa;
-      --card-color: #1f1f1f;
-      --form-bg: #333333;
-      --input-bg: #444444;
-      --input-color: #ffffff;
-      --testimonial-bg: #222222;
-      --hover-highlight: #00ffaa; /* same as accent */
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
     }
 
-    body.light {
-      --bg-color: #ffffff;
-      --text-color: #0f0f0f;
-      --card-color: #f9f9f9;
-      --form-bg: #f0f0f0;
-      --input-bg: #ffffff;
-      --input-color: #0f0f0f;
-      --testimonial-bg: #f7f7f7;
+    @media (max-width: 600px) {
+      html {
+        font-size: 14px;
+      }
     }
 
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      transition: all 0.3s ease;
+      background: linear-gradient(120deg, #0f0f0f, #1f1f1f);
+      color: #ffffff;
+      overflow-x: hidden;
+      line-height: 1.6;
     }
 
-    header, footer {
-      background-color: var(--card-color);
-      padding: 10px 20px;
+    header {
+      background-color: #1f1f1f;
       text-align: center;
+      padding: 40px 20px;
     }
 
-    h1, h2, h3, p {
-      text-align: center;
-      transition: all 0.4s ease;
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #1f1f1f;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
     }
 
-    h1:hover, h2:hover, h3:hover, p:hover {
-      color: var(--hover-highlight);
-      background-color: var(--hover-highlight);
-      filter: brightness(1.1);
-      mix-blend-mode: difference;
+    .logo {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+
+    h1, h2 {
+      color: #00ffaa;
     }
 
     a {
-      color: var(--accent-color);
+      color: #00ffaa;
       text-decoration: none;
       transition: all 0.3s ease;
     }
 
     a:hover {
       text-decoration: underline;
-      color: #ffffff;
-    }
-
-    button {
-      background-color: var(--accent-color);
-      color: #000;
-      border: none;
-      padding: 10px 20px;
-      margin: 10px;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #00cc88;
-      transform: scale(1.05);
     }
 
     .section {
@@ -85,237 +63,184 @@
       max-width: 900px;
       margin: auto;
       text-align: center;
-      animation: fadeIn 1s ease-in-out;
     }
 
-    .toggle-btn {
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      background-color: var(--accent-color);
+    button {
+      background-color: #00ffaa;
       color: #000;
       border: none;
-      padding: 6px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .theme-image {
-      max-height: 100px;
-      margin: 10px auto;
-      display: block;
-    }
-
-    img.logo {
-      max-height: 180px;
-      margin: 10px auto;
-      display: block;
-    }
-
-    iframe {
-      max-width: 100%;
-      border-radius: 10px;
-    }
-
-    form input {
-      width: 100%;
-      padding: 10px;
-      border: 2px solid #ccc;
+      padding: 12px 24px;
+      margin-top: 20px;
       border-radius: 5px;
-      background-color: var(--input-bg);
-      color: var(--input-color);
-      margin-bottom: 15px;
-      transition: background-color 0.3s ease;
-    }
-
-    form input:focus {
-      background-color: #555;
-      outline: none;
-      border-color: var(--accent-color);
-    }
-
-    footer {
-      font-size: 14px;
-    }
-
-    .blog-section, .testimonial-section, .features-section {
-      animation: fadeInUp 1.5s ease-in-out;
-    }
-
-    .blog-section {
-      background-color: var(--card-color);
-      padding: 40px 20px;
-    }
-
-    .blog-post {
-      background-color: var(--form-bg);
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 20px;
+      cursor: pointer;
+      font-weight: bold;
       transition: all 0.3s ease;
     }
 
-    .blog-post:hover {
-      background-color: var(--accent-color);
-      color: #000;
-      transform: scale(1.02);
+    button:hover {
+      background-color: #00cc88;
     }
 
-    .blog-title {
-      font-size: 1.5em;
-      margin-bottom: 10px;
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: radial-gradient(circle at center, #222 0%, #111 100%);
     }
 
-    .blog-summary {
-      font-size: 1.1em;
-      margin-bottom: 15px;
+    .countdown {
+      margin-bottom: 20px;
     }
 
-    .testimonial {
-      border: 1px solid #ccc;
-      border-radius: 10px;
+    iframe {
+      width: 100%;
+      max-width: 720px;
+      height: 400px;
+      border-radius: 12px;
+      border: none;
+    }
+
+    .socials i {
+      font-size: 2rem;
+      margin: 0 15px;
+      color: #00ffaa;
+      transition: all 0.3s ease;
+    }
+
+    .socials i:hover {
+      color: #00cc88;
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
       padding: 20px;
-      margin-bottom: 20px;
-      background-color: var(--form-bg);
-      transition: background-color 0.3s ease, transform 0.3s ease;
+      font-size: 0.9rem;
     }
 
-    .testimonial:hover {
-      background-color: var(--accent-color);
-      color: #000;
-      transform: translateY(-5px);
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
     }
 
-    .testimonial-text {
-      font-style: italic;
-      margin-bottom: 10px;
+    .popup-content {
+      background-color: #222;
+      padding: 30px;
+      margin: 10% auto;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      border-radius: 10px;
+      position: relative;
     }
 
-    .testimonial-author {
-      font-weight: bold;
-      color: var(--accent-color);
+    .popup input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
     }
 
-    .features-section {
-      background-color: var(--card-color);
-      padding: 40px 20px;
+    .close-btn {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
     }
 
-    .feature {
-      margin-bottom: 20px;
-    }
-
-    .feature-title {
-      font-size: 1.5em;
-      color: var(--accent-color);
-    }
-
-    .feature-description {
-      font-size: 1.1em;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
+    @media (max-width: 480px) {
+      .popup-content {
+        margin: 20% auto;
+        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
 
-  <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
-
-  <header>
-    <img src="logo.png" alt="Logo" class="logo">
+  <header class="sticky-header">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <h1>Earn with AI: Zero to $1M</h1>
+    <p>Learn how to earn from AI without investment. Start now.</p>
   </header>
 
-  <section class="section" id="video">
-    <h2>Watch This to Learn How to Earn With AI</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/jKUPmYhOJYc"
-      title="Earn With AI Video" frameborder="0" allowfullscreen></iframe>
+  <section class="hero">
+    <h2>🚀 Launching Soon</h2>
+    <div class="countdown" id="countdown">⏳ Countdown Loading...</div>
+    <button onclick="openPopup()">Get Free eBook</button>
   </section>
 
-  <section class="section" id="signup">
-    <h2>Get Your Free AI Ebook</h2>
-    <p>Enter your name and email to receive your free AI tools ebook instantly.</p>
-
-    <form action="https://formspree.io/f/myzeqkgy" method="POST" style="max-width: 400px; margin: auto;">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <button type="submit">Send Ebook</button>
-    </form>
-
-    <p>Or get it directly from <a href="YOUR_AFFILIATE_LINK_HERE" class="blog-link" target="_blank">this link</a>!</p>
+  <section class="section">
+    <h2>What You’ll Learn</h2>
+    <p>
+      Discover 100% free ways to earn with AI: automation tools, affiliate marketing, video content, eBooks, and viral strategies using ChatGPT, Canva, and more.
+    </p>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
   </section>
 
-  <section class="blog-section">
-    <h2>Our Latest Blog Posts</h2>
-
-    <div class="blog-post">
-      <h3 class="blog-title">
-        <a href="YOUR_AFFILIATE_BLOG_LINK_1" class="blog-link" target="_blank">How AI is Changing the Future of Work</a>
-      </h3>
-      <p class="blog-summary">Discover how artificial intelligence is revolutionizing industries and shaping the future of employment. Learn about new opportunities and challenges...</p>
-      <a href="YOUR_AFFILIATE_BLOG_LINK_1" class="blog-link" target="_blank">Read More</a>
-    </div>
-
-    <div class="blog-post">
-      <h3 class="blog-title">
-        <a href="YOUR_AFFILIATE_BLOG_LINK_2" class="blog-link" target="_blank">The Best AI Tools for Beginners</a>
-      </h3>
-      <p class="blog-summary">A guide to the top AI tools you should consider using if you're just starting out. Find out which platforms are best for learning and experimenting...</p>
-      <a href="YOUR_AFFILIATE_BLOG_LINK_2" class="blog-link" target="_blank">Read More</a>
-    </div>
-  </section>
-
-  <section class="testimonial-section">
-    <h2>What Our Users Say</h2>
-
-    <div class="testimonial">
-      <p class="testimonial-text">"This ebook was exactly what I needed to get started with AI. The tools mentioned are easy to use, and the strategies helped me improve my productivity."</p>
-      <p class="testimonial-author">- John Doe</p>
-    </div>
-
-    <div class="testimonial">
-      <p class="testimonial-text">"I never knew AI could be so impactful in my career. This resource opened my eyes to countless possibilities!"</p>
-      <p class="testimonial-author">- Jane Smith</p>
-    </div>
-  </section>
-
-  <section class="features-section">
-    <h2>Key Features of Our AI Tools</h2>
-
-    <div class="feature">
-      <h3 class="feature-title">AI-Powered Automation</h3>
-      <p class="feature-description">Automate your tasks with AI and increase your efficiency by eliminating repetitive activities. Check it out via our <a href="YOUR_AFFILIATE_TOOL_LINK" target="_blank" class="blog-link">affiliate tool</a>!</p>
-    </div>
-
-    <div class="feature">
-      <h3 class="feature-title">Intelligent Insights</h3>
-      <p class="feature-description">Gain valuable insights from data with machine learning models designed to analyze and predict trends. Learn more <a href="YOUR_AFFILIATE_TOOL_LINK" target="_blank" class="blog-link">here</a>!</p>
-    </div>
+  <section class="section socials">
+    <h2>Follow Us</h2>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="#"><i class="fa-brands fa-youtube"></i></a>
   </section>
 
   <footer>
-    <p>© 2025 Earn With AI. All rights reserved.</p>
+    &copy; 2025 EarnWithAI.1978 | Zero to $1M Journey | All rights reserved.
   </footer>
 
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>Free AI eBook</h2>
+      <input type="email" placeholder="Enter your email" />
+      <button>Download</button>
+    </div>
+  </div>
+
   <script>
-    function toggleTheme() {
-      document.body.classList.toggle('light');
+    const countdown = document.getElementById('countdown');
+    const launchDate = new Date("2025-06-01T00:00:00Z").getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+
+      if (distance < 0) {
+        countdown.innerHTML = "🔥 We're live!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    };
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    function openPopup() {
+      document.getElementById('popup').style.display = 'block';
+    }
+
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
     }
   </script>
+
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
