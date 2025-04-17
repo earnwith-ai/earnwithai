@@ -14,6 +14,7 @@
       --input-bg: #444444;
       --input-color: #ffffff;
       --testimonial-bg: #222222;
+      --hover-highlight: #00ffaa; /* same as accent */
     }
 
     body.light {
@@ -40,17 +41,27 @@
       text-align: center;
     }
 
-    h1, h2 {
-      color: var(--accent-color);
+    h1, h2, h3, p {
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+
+    h1:hover, h2:hover, h3:hover, p:hover {
+      color: var(--hover-highlight);
+      background-color: var(--hover-highlight);
+      filter: brightness(1.1);
+      mix-blend-mode: difference;
     }
 
     a {
       color: var(--accent-color);
       text-decoration: none;
+      transition: all 0.3s ease;
     }
 
     a:hover {
       text-decoration: underline;
+      color: #ffffff;
     }
 
     button {
@@ -61,10 +72,12 @@
       margin: 10px;
       cursor: pointer;
       border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
     button:hover {
       background-color: #00cc88;
+      transform: scale(1.05);
     }
 
     .section {
@@ -72,6 +85,7 @@
       max-width: 900px;
       margin: auto;
       text-align: center;
+      animation: fadeIn 1s ease-in-out;
     }
 
     .toggle-btn {
@@ -95,6 +109,7 @@
     img.logo {
       max-height: 180px;
       margin: 10px auto;
+      display: block;
     }
 
     iframe {
@@ -123,7 +138,10 @@
       font-size: 14px;
     }
 
-    /* Blog Section */
+    .blog-section, .testimonial-section, .features-section {
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
     .blog-section {
       background-color: var(--card-color);
       padding: 40px 20px;
@@ -140,34 +158,17 @@
     .blog-post:hover {
       background-color: var(--accent-color);
       color: #000;
+      transform: scale(1.02);
     }
 
     .blog-title {
       font-size: 1.5em;
       margin-bottom: 10px;
-      color: var(--text-color);
     }
 
     .blog-summary {
-      color: var(--text-color);
       font-size: 1.1em;
       margin-bottom: 15px;
-    }
-
-    .blog-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .blog-link:hover {
-      text-decoration: underline;
-    }
-
-    /* Testimonial Section */
-    .testimonial-section {
-      background-color: var(--testimonial-bg);
-      padding: 40px 20px;
     }
 
     .testimonial {
@@ -176,12 +177,13 @@
       padding: 20px;
       margin-bottom: 20px;
       background-color: var(--form-bg);
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
     .testimonial:hover {
       background-color: var(--accent-color);
       color: #000;
+      transform: translateY(-5px);
     }
 
     .testimonial-text {
@@ -194,10 +196,9 @@
       color: var(--accent-color);
     }
 
-    /* Features Section */
     .features-section {
-      padding: 40px 20px;
       background-color: var(--card-color);
+      padding: 40px 20px;
     }
 
     .feature {
@@ -211,7 +212,23 @@
 
     .feature-description {
       font-size: 1.1em;
-      color: var(--text-color);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -225,8 +242,8 @@
 
   <section class="section" id="video">
     <h2>Watch This to Learn How to Earn With AI</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/jKUPmYhOJYc" 
-    title="Earn With AI Video" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jKUPmYhOJYc"
+      title="Earn With AI Video" frameborder="0" allowfullscreen></iframe>
   </section>
 
   <section class="section" id="signup">
@@ -234,18 +251,14 @@
     <p>Enter your name and email to receive your free AI tools ebook instantly.</p>
 
     <form action="https://formspree.io/f/myzeqkgy" method="POST" style="max-width: 400px; margin: auto;">
-      <div style="margin-bottom: 15px;">
-        <input type="text" name="name" placeholder="Your Name" required>
-      </div>
-      <div style="margin-bottom: 15px;">
-        <input type="email" name="email" placeholder="Your Email" required>
-      </div>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
       <button type="submit">Send Ebook</button>
     </form>
+
     <p>Or get it directly from <a href="YOUR_AFFILIATE_LINK_HERE" class="blog-link" target="_blank">this link</a>!</p>
   </section>
 
-  <!-- Blog Section -->
   <section class="blog-section">
     <h2>Our Latest Blog Posts</h2>
 
@@ -266,7 +279,6 @@
     </div>
   </section>
 
-  <!-- Testimonial Section -->
   <section class="testimonial-section">
     <h2>What Our Users Say</h2>
 
@@ -281,7 +293,6 @@
     </div>
   </section>
 
-  <!-- Features Section -->
   <section class="features-section">
     <h2>Key Features of Our AI Tools</h2>
 
@@ -303,12 +314,6 @@
   <script>
     function toggleTheme() {
       document.body.classList.toggle('light');
-      const themeImage = document.getElementById('themeImage');
-      if (document.body.classList.contains('light')) {
-        themeImage.src = 'night-theme-image.png';  // night theme image
-      } else {
-        themeImage.src = 'day-theme-image.png';  // day theme image
-      }
     }
   </script>
 
