@@ -1,46 +1,115 @@
+/* Modern Dark Theme Styling */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #0f0f0f;
   color: #ffffff;
+  scroll-behavior: smooth;
 }
 
+/* Header */
 header, footer {
-  background-color: #1f1f1f;
-  padding: 20px;
+  background: linear-gradient(to right, #1f1f1f, #2b2b2b);
+  padding: 30px 20px;
   text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 255, 170, 0.1);
 }
 
+header img {
+  max-width: 220px;
+  height: auto;
+  margin-bottom: 10px;
+  animation: fadeIn 1.5s ease;
+}
+
+/* Headings */
 h1, h2, h3 {
   color: #00ffaa;
+  margin-bottom: 15px;
+  animation: slideIn 1.2s ease;
 }
 
+/* Links */
 a {
   color: #00ffaa;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #00cc88;
 }
 
+/* Buttons */
 button {
   background-color: #00ffaa;
   color: #000;
   border: none;
-  padding: 10px 20px;
-  margin: 10px;
+  padding: 12px 24px;
+  margin-top: 20px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #00cc88;
 }
 
+/* Section Styling */
 .section {
-  padding: 40px 20px;
-  max-width: 900px;
+  padding: 50px 20px;
+  max-width: 1000px;
   margin: auto;
   text-align: center;
+  animation: fadeInUp 1s ease;
+}
+
+/* Lists */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+/* Social Icons */
+.socials a {
+  font-size: 2rem;
+  margin: 0 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.socials a:hover {
+  transform: scale(1.2);
+  color: #00cc88;
+}
+
+/* Footer */
+footer p {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
