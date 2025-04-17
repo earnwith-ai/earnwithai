@@ -10,12 +10,18 @@
       --text-color: #ffffff;
       --accent-color: #00ffaa;
       --card-color: #1f1f1f;
+      --form-bg: #333333;
+      --input-bg: #444444;
+      --input-color: #ffffff;
     }
 
     body.light {
-      --bg-color: #f9f9f9;
+      --bg-color: #ffffff;
       --text-color: #0f0f0f;
-      --card-color: #ffffff;
+      --card-color: #f9f9f9;
+      --form-bg: #f0f0f0;
+      --input-bg: #ffffff;
+      --input-color: #0f0f0f;
     }
 
     body {
@@ -78,14 +84,41 @@
       cursor: pointer;
     }
 
+    .theme-image {
+      max-height: 100px;
+      margin: 10px auto;
+      display: block;
+    }
+
     img.logo {
-      max-height: 200px;
+      max-height: 150px;
       margin: 10px auto;
     }
 
     iframe {
       max-width: 100%;
       border-radius: 10px;
+    }
+
+    form input {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      background-color: var(--input-bg);
+      color: var(--input-color);
+      margin-bottom: 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    form input:focus {
+      background-color: #555;
+      outline: none;
+      border-color: var(--accent-color);
+    }
+
+    footer {
+      font-size: 14px;
     }
   </style>
 </head>
@@ -109,12 +142,10 @@
 
     <form action="https://formspree.io/f/myzeqkgy" method="POST" style="max-width: 400px; margin: auto;">
       <div style="margin-bottom: 15px;">
-        <input type="text" name="name" placeholder="Your Name" required
-               style="width: 100%; padding: 10px; border: none; border-radius: 5px;">
+        <input type="text" name="name" placeholder="Your Name" required>
       </div>
       <div style="margin-bottom: 15px;">
-        <input type="email" name="email" placeholder="Your Email" required
-               style="width: 100%; padding: 10px; border: none; border-radius: 5px;">
+        <input type="email" name="email" placeholder="Your Email" required>
       </div>
       <button type="submit">Send Ebook</button>
     </form>
@@ -127,6 +158,12 @@
   <script>
     function toggleTheme() {
       document.body.classList.toggle('light');
+      const themeImage = document.getElementById('themeImage');
+      if (document.body.classList.contains('light')) {
+        themeImage.src = 'night-theme-image.png';  // night theme image
+      } else {
+        themeImage.src = 'day-theme-image.png';  // day theme image
+      }
     }
   </script>
 
