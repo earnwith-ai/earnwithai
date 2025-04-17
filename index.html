@@ -3,64 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Join the Earn With AI 365-Day Challenge. Learn how to build an online business from $0 to $1M using AI tools and affiliate marketing."/>
-  <title>Earn With AI – $1M in 365 Days</title>
-  <link rel="stylesheet" href="style.css"/>
-  <script defer src="script.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <title>Earn With AI</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
+      transition: background-color 0.3s, color 0.3s;
+      text-align: center;
+    }
+
+    body.light-mode {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    header, footer {
+      background-color: #1f1f1f;
+      padding: 20px;
+    }
+
+    body.light-mode header,
+    body.light-mode footer {
+      background-color: #f0f0f0;
+    }
+
+    h1, h2, h3 {
+      color: #00ffaa;
+    }
+
+    a {
+      color: #00ffaa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      background-color: #00ffaa;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #00cc88;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    #theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #00ffaa;
+    }
+
+    body.light-mode #theme-toggle {
+      color: #000;
+    }
+
+    /* Email Form Styling */
+    .email-form input[type="email"] {
+      padding: 10px;
+      margin-top: 10px;
+      width: 250px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .email-form button {
+      margin-left: 10px;
+    }
+
+    .logo {
+      width: 180px;
+      margin-top: 20px;
+    }
+
+  </style>
 </head>
 <body>
 
-  <header class="sticky-header">
-    <img src="logo.png" alt="EarnWithAI Logo" class="logo" />
-    <h1>Earn With AI – 365 Day Challenge</h1>
-    <p>From $0 to $1M using AI and Affiliate Marketing</p>
+  <!-- Theme Toggle -->
+  <button onclick="toggleTheme()" id="theme-toggle">🌙</button>
+
+  <!-- Header -->
+  <header>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>Welcome to Earn With AI</h1>
+    <p>Your AI-powered earnings start here</p>
   </header>
 
-  <section class="hero">
-    <div class="countdown">
-      <h2>Countdown to Day 365</h2>
-      <div id="timer">Loading...</div>
-    </div>
-    <p>Join our journey as we go from $0 to $1,000,000 in 365 days using AI tools, affiliate marketing, and smart strategies.</p>
-    <button id="openPopup">📘 Get Free eBook</button>
-  </section>
+  <!-- Main Section -->
+  <div class="section">
+    <h2>Subscribe for Updates</h2>
+    <p>Get the latest AI earning tools, tips, and tutorials delivered to your inbox.</p>
 
-  <section class="tools section">
-    <h2><i class="fas fa-tools"></i> Recommended Tools</h2>
-    <ul>
-      <li><a href="https://systeme.io/?sa=sa02294988694c423214c5c436aedc33618b6a91cd" target="_blank">Systeme.io – Funnels & Automation</a></li>
-      <li><a href="https://koala.sh/?via=earn" target="_blank">Koala.sh – AI Blogging Tool</a></li>
-      <li><a href="https://app.writesonic.com/" target="_blank">Writesonic – AI Content Generator</a></li>
-    </ul>
-  </section>
-
-  <section class="video section">
-    <h2><i class="fas fa-play-circle"></i> Watch Our Story</h2>
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-  </section>
-
-  <section class="socials section">
-    <h2><i class="fas fa-share-alt"></i> Follow Us</h2>
-    <a href="https://instagram.com/earnwithai.1978" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://tiktok.com/@earnwithai.1978" target="_blank"><i class="fab fa-tiktok"></i></a>
-    <a href="https://youtube.com/@earnwithai.1978" target="_blank"><i class="fab fa-youtube"></i></a>
-  </section>
-
-  <footer>
-    <p>This page contains affiliate links. I may earn a small commission at no extra cost to you.</p>
-    <p>&copy; 2025 EarnWithAI. All rights reserved.</p>
-  </footer>
-
-  <!-- Popup CTA -->
-  <div id="popup" class="popup">
-    <div class="popup-content">
-      <span class="close-btn" id="closePopup">&times;</span>
-      <h3>Get Your Free AI Business eBook</h3>
-      <input type="email" placeholder="Enter your email" />
-      <button>Send Me the eBook</button>
-    </div>
+    <!-- Email Form using Formspree -->
+    <form class="email-form" action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
   </div>
 
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Earn With AI. All rights reserved.</p>
+  </footer>
+
+  <!-- Theme Script -->
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+      const isLight = document.body.classList.contains('light-mode');
+      document.getElementById('theme-toggle').textContent = isLight ? '🌞' : '🌙';
+    }
+  </script>
 </body>
 </html>
