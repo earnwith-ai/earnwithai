@@ -13,6 +13,7 @@
       --form-bg: #333333;
       --input-bg: #444444;
       --input-color: #ffffff;
+      --testimonial-bg: #222222;
     }
 
     body.light {
@@ -22,6 +23,7 @@
       --form-bg: #f0f0f0;
       --input-bg: #ffffff;
       --input-color: #0f0f0f;
+      --testimonial-bg: #f7f7f7;
     }
 
     body {
@@ -91,7 +93,7 @@
     }
 
     img.logo {
-      max-height: 200px;
+      max-height: 180px;
       margin: 10px auto;
     }
 
@@ -119,6 +121,97 @@
 
     footer {
       font-size: 14px;
+    }
+
+    /* Blog Section */
+    .blog-section {
+      background-color: var(--card-color);
+      padding: 40px 20px;
+    }
+
+    .blog-post {
+      background-color: var(--form-bg);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .blog-post:hover {
+      background-color: var(--accent-color);
+      color: #000;
+    }
+
+    .blog-title {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: var(--text-color);
+    }
+
+    .blog-summary {
+      color: var(--text-color);
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+
+    .blog-link {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .blog-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Testimonial Section */
+    .testimonial-section {
+      background-color: var(--testimonial-bg);
+      padding: 40px 20px;
+    }
+
+    .testimonial {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: var(--form-bg);
+      transition: background-color 0.3s ease;
+    }
+
+    .testimonial:hover {
+      background-color: var(--accent-color);
+      color: #000;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-author {
+      font-weight: bold;
+      color: var(--accent-color);
+    }
+
+    /* Features Section */
+    .features-section {
+      padding: 40px 20px;
+      background-color: var(--card-color);
+    }
+
+    .feature {
+      margin-bottom: 20px;
+    }
+
+    .feature-title {
+      font-size: 1.5em;
+      color: var(--accent-color);
+    }
+
+    .feature-description {
+      font-size: 1.1em;
+      color: var(--text-color);
     }
   </style>
 </head>
@@ -149,6 +242,53 @@
       </div>
       <button type="submit">Send Ebook</button>
     </form>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog-section">
+    <h2>Our Latest Blog Posts</h2>
+
+    <div class="blog-post">
+      <h3 class="blog-title">How AI is Changing the Future of Work</h3>
+      <p class="blog-summary">Discover how artificial intelligence is revolutionizing industries and shaping the future of employment. Learn about new opportunities and challenges...</p>
+      <a href="#" class="blog-link">Read More</a>
+    </div>
+
+    <div class="blog-post">
+      <h3 class="blog-title">The Best AI Tools for Beginners</h3>
+      <p class="blog-summary">A guide to the top AI tools you should consider using if you're just starting out. Find out which platforms are best for learning and experimenting...</p>
+      <a href="#" class="blog-link">Read More</a>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="testimonial-section">
+    <h2>What Our Users Say</h2>
+
+    <div class="testimonial">
+      <p class="testimonial-text">"This ebook was exactly what I needed to get started with AI. The tools mentioned are easy to use, and the strategies helped me improve my productivity."</p>
+      <p class="testimonial-author">- John Doe</p>
+    </div>
+
+    <div class="testimonial">
+      <p class="testimonial-text">"I never knew AI could be so impactful in my career. This resource opened my eyes to countless possibilities!"</p>
+      <p class="testimonial-author">- Jane Smith</p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <h2>Key Features of Our AI Tools</h2>
+
+    <div class="feature">
+      <h3 class="feature-title">AI-Powered Automation</h3>
+      <p class="feature-description">Automate your tasks with AI and increase your efficiency by eliminating repetitive activities.</p>
+    </div>
+
+    <div class="feature">
+      <h3 class="feature-title">Intelligent Insights</h3>
+      <p class="feature-description">Gain valuable insights from data with machine learning models designed to analyze and predict trends.</p>
+    </div>
   </section>
 
   <footer>
