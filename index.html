@@ -3,152 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Join the Earn With AI 365-Day Challenge. Learn how to build an online business from $0 to $1M using AI tools, affiliate marketing, and a no-code approach."/>
+  <meta name="description" content="Join the Earn With AI 365-Day Challenge. Learn how to build an online business from $0 to $1M using AI tools and affiliate marketing."/>
   <title>Earn With AI – $1M in 365 Days</title>
-
-  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-
-  <!-- Styles -->
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0f0f0f;
-      color: #ffffff;
-    }
-
-    header, footer {
-      background-color: #1f1f1f;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header img {
-      width: 220px;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    h1, h2, h3 {
-      color: #00ffaa;
-      margin-top: 10px;
-    }
-
-    a {
-      color: #00ffaa;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    button {
-      background-color: #00ffaa;
-      color: #000;
-      border: none;
-      padding: 10px 20px;
-      margin: 10px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    button:hover {
-      background-color: #00cc88;
-    }
-
-    .section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .socials a {
-      font-size: 1.5rem;
-      margin: 0 10px;
-      color: #00ffaa;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .fadeIn { animation: fadeIn 2s ease-in-out; }
-    .slideIn { animation: slideIn 2s ease-out; }
-    .fadeInUp { animation: fadeInUp 2s ease-out; }
-  </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <img src="logo.png" alt="Earn With AI Logo" class="fadeIn"/>
-    <h1 class="slideIn">Earn With AI – 365 Day Challenge</h1>
-    <p class="fadeInUp">From $0 to $1M using AI and Affiliate Marketing</p>
+  <header class="sticky-header">
+    <img src="logo.png" alt="EarnWithAI Logo" class="logo" />
+    <h1>Earn With AI – 365 Day Challenge</h1>
+    <p>From $0 to $1M using AI and Affiliate Marketing</p>
   </header>
 
-  <!-- Hero Section -->
-  <section class="section fadeInUp">
-    <h2>Welcome to Our Journey</h2>
-    <p>Join us as we grow from $0 to $1,000,000 in 365 days using AI tools, affiliate marketing, and smart strategies.</p>
-    <input type="email" placeholder="Enter your email to get the free eBook" style="padding:10px;width:60%;max-width:400px;border-radius:6px;border:none;margin-top:20px;"/>
-    <br>
-    <button>Get eBook</button>
-  </section>
-
-  <!-- Tools -->
-  <section class="section fadeIn">
-    <h2>Recommended Tools</h2>
-    <ul style="list-style:none;padding:0;">
-      <li><a href="https://systeme.io/?sa=sa02294988694c423214c5c436aedc33618b6a91cd" target="_blank">👉 Systeme.io – Funnels & Automation</a></li>
-      <li><a href="https://koala.sh/?via=earn" target="_blank">👉 Koala.sh – AI Blogging Tool</a></li>
-      <li><a href="https://app.writesonic.com/" target="_blank">👉 Writesonic – AI Writing Platform</a></li>
-    </ul>
-  </section>
-
-  <!-- Blog -->
-  <section class="section fadeInUp">
-    <h2>Latest Blog Posts</h2>
-    <ul style="list-style:none;padding:0;">
-      <li>🚀 How We Started with $0 – Day 1 Recap</li>
-      <li>🤖 Top 5 AI Tools for Beginners</li>
-    </ul>
-  </section>
-
-  <!-- Video -->
-  <section class="section fadeIn">
-    <h2>Watch Our Intro Video</h2>
-    <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-  </section>
-
-  <!-- Social Media -->
-  <section class="section fadeInUp">
-    <h2>Follow Us</h2>
-    <div class="socials">
-      <a href="https://instagram.com/earnwithai.1978" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://tiktok.com/@earnwithai.1978" target="_blank"><i class="fab fa-tiktok"></i></a>
-      <a href="https://youtube.com/@earnwithai.1978" target="_blank"><i class="fab fa-youtube"></i></a>
+  <section class="hero">
+    <div class="countdown">
+      <h2>Countdown to Day 365</h2>
+      <div id="timer">Loading...</div>
     </div>
+    <p>Join our journey as we go from $0 to $1,000,000 in 365 days using AI tools, affiliate marketing, and smart strategies.</p>
+    <button id="openPopup">📘 Get Free eBook</button>
   </section>
 
-  <!-- Footer -->
+  <section class="tools section">
+    <h2><i class="fas fa-tools"></i> Recommended Tools</h2>
+    <ul>
+      <li><a href="https://systeme.io/?sa=sa02294988694c423214c5c436aedc33618b6a91cd" target="_blank">Systeme.io – Funnels & Automation</a></li>
+      <li><a href="https://koala.sh/?via=earn" target="_blank">Koala.sh – AI Blogging Tool</a></li>
+      <li><a href="https://app.writesonic.com/" target="_blank">Writesonic – AI Content Generator</a></li>
+    </ul>
+  </section>
+
+  <section class="video section">
+    <h2><i class="fas fa-play-circle"></i> Watch Our Story</h2>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </section>
+
+  <section class="socials section">
+    <h2><i class="fas fa-share-alt"></i> Follow Us</h2>
+    <a href="https://instagram.com/earnwithai.1978" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://tiktok.com/@earnwithai.1978" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://youtube.com/@earnwithai.1978" target="_blank"><i class="fab fa-youtube"></i></a>
+  </section>
+
   <footer>
     <p>This page contains affiliate links. I may earn a small commission at no extra cost to you.</p>
     <p>&copy; 2025 EarnWithAI. All rights reserved.</p>
   </footer>
+
+  <!-- Popup CTA -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="closePopup">&times;</span>
+      <h3>Get Your Free AI Business eBook</h3>
+      <input type="email" placeholder="Enter your email" />
+      <button>Send Me the eBook</button>
+    </div>
+  </div>
 
 </body>
 </html>
