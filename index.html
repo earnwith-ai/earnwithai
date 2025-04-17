@@ -2,205 +2,153 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Join the Earn With AI 365-Day Challenge. Learn how to build an online business from $0 to $1M using AI tools, affiliate marketing, and a no-code approach." />
-  <title>Earn With AI – 365 Day Challenge</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Join the Earn With AI 365-Day Challenge. Learn how to build an online business from $0 to $1M using AI tools, affiliate marketing, and a no-code approach."/>
+  <title>Earn With AI – $1M in 365 Days</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Styles -->
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(to right, #0f0f0f, #1c1c1c);
-      color: #fff;
-      line-height: 1.6;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
     }
-    header {
+
+    header, footer {
+      background-color: #1f1f1f;
+      padding: 20px;
       text-align: center;
-      padding: 3rem 1rem;
-      background: #1a1a1a;
-      position: relative;
     }
+
     header img {
-      max-width: 250px;
-      margin-bottom: 1rem;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      animation: fadeInDown 1s ease-in-out;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #ccc;
-      animation: fadeInUp 1.5s ease-in-out;
+      width: 220px;
+      animation: fadeIn 2s ease-in-out;
     }
 
-    .cta {
-      text-align: center;
-      margin: 2rem auto;
+    h1, h2, h3 {
+      color: #00ffaa;
+      margin-top: 10px;
     }
-    .cta input[type="email"] {
-      padding: 0.8rem;
-      width: 60%;
-      max-width: 400px;
-      border: none;
-      border-radius: 8px;
-      margin-bottom: 1rem;
+
+    a {
+      color: #00ffaa;
+      text-decoration: none;
     }
-    .cta button {
-      padding: 0.8rem 1.5rem;
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      background-color: #00ffaa;
+      color: #000;
       border: none;
-      background-color: #00c896;
-      color: #fff;
-      font-weight: bold;
-      border-radius: 8px;
+      padding: 10px 20px;
+      margin: 10px;
       cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .cta button:hover {
-      background-color: #02ad81;
+      border-radius: 5px;
     }
 
-    section {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 1rem;
-      animation: fadeIn 1s ease-in-out;
+    button:hover {
+      background-color: #00cc88;
     }
 
-    h2 {
+    .section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
       text-align: center;
-      margin-bottom: 1rem;
-      color: #00c896;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    .card-list li {
-      background-color: #2a2a2a;
-      padding: 1rem;
-      border-radius: 10px;
-      margin: 1rem 0;
-      transition: transform 0.3s ease;
-    }
-    .card-list li:hover {
-      transform: scale(1.03);
-    }
-
-    .video iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-      border-radius: 10px;
-    }
-
-    .socials {
-      text-align: center;
-      margin-top: 2rem;
-    }
     .socials a {
-      margin: 0 1rem;
       font-size: 1.5rem;
-      color: #00c896;
-      transition: color 0.3s ease;
-    }
-    .socials a:hover {
-      color: #fff;
+      margin: 0 10px;
+      color: #00ffaa;
     }
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #aaa;
-      background: #111;
-      margin-top: 2rem;
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
     }
 
-    @keyframes fadeInDown {
-      0% {
-        opacity: 0;
-        transform: translateY(-40px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
+    .fadeIn { animation: fadeIn 2s ease-in-out; }
+    .slideIn { animation: slideIn 2s ease-out; }
+    .fadeInUp { animation: fadeInUp 2s ease-out; }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
-    <img src="logo.png" alt="Earn With AI Logo" />
-    <h1>Earn With AI – 365 Day Challenge</h1>
-    <p>From $0 to $1M using AI & Affiliate Marketing</p>
+    <img src="logo.png" alt="Earn With AI Logo" class="fadeIn"/>
+    <h1 class="slideIn">Earn With AI – 365 Day Challenge</h1>
+    <p class="fadeInUp">From $0 to $1M using AI and Affiliate Marketing</p>
   </header>
 
-  <section class="cta">
-    <input type="email" placeholder="Enter your email to get the free eBook" />
-    <br />
+  <!-- Hero Section -->
+  <section class="section fadeInUp">
+    <h2>Welcome to Our Journey</h2>
+    <p>Join us as we grow from $0 to $1,000,000 in 365 days using AI tools, affiliate marketing, and smart strategies.</p>
+    <input type="email" placeholder="Enter your email to get the free eBook" style="padding:10px;width:60%;max-width:400px;border-radius:6px;border:none;margin-top:20px;"/>
+    <br>
     <button>Get eBook</button>
   </section>
 
-  <section class="tools">
+  <!-- Tools -->
+  <section class="section fadeIn">
     <h2>Recommended Tools</h2>
-    <ul class="card-list">
+    <ul style="list-style:none;padding:0;">
       <li><a href="https://systeme.io/?sa=sa02294988694c423214c5c436aedc33618b6a91cd" target="_blank">👉 Systeme.io – Funnels & Automation</a></li>
       <li><a href="https://koala.sh/?via=earn" target="_blank">👉 Koala.sh – AI Blogging Tool</a></li>
-      <li><a href="#" target="_blank">Writesonic – Coming Soon</a></li>
+      <li><a href="https://app.writesonic.com/" target="_blank">👉 Writesonic – AI Writing Platform</a></li>
     </ul>
   </section>
 
-  <section class="blog">
+  <!-- Blog -->
+  <section class="section fadeInUp">
     <h2>Latest Blog Posts</h2>
-    <ul class="card-list">
+    <ul style="list-style:none;padding:0;">
       <li>🚀 How We Started with $0 – Day 1 Recap</li>
       <li>🤖 Top 5 AI Tools for Beginners</li>
     </ul>
   </section>
 
-  <section class="video">
-    <h2>Introductory Video</h2>
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  <!-- Video -->
+  <section class="section fadeIn">
+    <h2>Watch Our Intro Video</h2>
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
   </section>
 
-  <section class="socials">
+  <!-- Social Media -->
+  <section class="section fadeInUp">
     <h2>Follow Us</h2>
-    <a href="https://instagram.com/earnwithai.1978" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://tiktok.com/@earnwithai.1978" target="_blank"><i class="fab fa-tiktok"></i></a>
-    <a href="https://youtube.com/@earnwithai.1978" target="_blank"><i class="fab fa-youtube"></i></a>
+    <div class="socials">
+      <a href="https://instagram.com/earnwithai.1978" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://tiktok.com/@earnwithai.1978" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://youtube.com/@earnwithai.1978" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>This page contains affiliate links. I may earn a small commission at no extra cost to you.</p>
     <p>&copy; 2025 EarnWithAI. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
