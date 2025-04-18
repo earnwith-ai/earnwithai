@@ -1,128 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn how to earn $1M in 365 days using free AI tools like ChatGPT and Canva. Start your journey today!">
-  <title>Earn With AI — Zero to $1M Challenge</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Earn With AI | $1M in 365 Days</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="scripts.js" defer></script>
 </head>
+
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="logo">
-      <img src="logo.png" alt="Earn With AI Logo">
-    </div>
-    <nav class="nav-links">
-      <a href="#how-it-works">How It Works</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#community">Community</a>
-    </nav>
+  <header class="sticky-header">
+    <img src="logo.png" alt="Earn With AI Logo" class="logo" />
+    <h1>Earn With AI</h1>
+    <p>Join us on a mission to earn $1,000,000 in 365 days using only FREE AI tools & strategies.</p>
+    <button onclick="openPopup()">Get Free eBook</button>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
-    <h1>Earn With AI — Zero to $1M in 365 Days</h1>
-    <p>Unlock the power of free AI tools to build your income from scratch.</p>
-    <div class="hero-buttons">
-      <button id="ebook-popup-btn">Download Free eBook</button>
-      <button onclick="scrollToSection('roadmap')">Join the Challenge</button>
+    <h2>Why Earn With AI?</h2>
+    <p>We’re not selling dreams. We’re building a movement. Zero investment. Zero BS. 100% Execution.</p>
+    <div class="countdown">
+      <h3>Countdown to $1M</h3>
+      <div id="timer"></div>
     </div>
-    <div class="countdown-timer">
-      <span id="days">00</span>d :
-      <span id="hours">00</span>h :
-      <span id="minutes">00</span>m :
-      <span id="seconds">00</span>s
-    </div>
-    <iframe class="intro-video" width="560" height="315" src="https://www.youtube.com/embed/example_video_id" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
   </section>
 
-  <!-- How It Works Section -->
-  <section id="how-it-works" class="how-it-works">
-    <h2>How to Earn With AI in Just 3 Steps</h2>
-    <div class="steps">
-      <div class="step">
-        <i class="icon">📚</i>
-        <h3>Learn</h3>
-        <p>Master AI tools like ChatGPT, Canva, and Midjourney.</p>
-      </div>
-      <div class="step">
-        <i class="icon">✨</i>
-        <h3>Create</h3>
-        <p>Build content, products, and services effortlessly.</p>
-      </div>
-      <div class="step">
-        <i class="icon">💰</i>
-        <h3>Earn</h3>
-        <p>Monetize through affiliate marketing, automation, and more.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Free eBook Offer -->
-  <section class="free-ebook">
-    <h2>Your First Step to $1M: Download Our Free eBook!</h2>
-    <p>Instant Access — No Cost, No Catch.</p>
-    <form id="email-form">
-      <input type="email" placeholder="Enter your email" required>
-      <button type="submit">Get My Free eBook Now</button>
-    </form>
-  </section>
-
-  <!-- Success Roadmap -->
-  <section id="roadmap" class="roadmap">
-    <h2>The $0 to $1M Blueprint</h2>
-    <ul class="timeline">
-      <li><strong>Month 1:</strong> Learn AI Basics & Set Up Your Tools</li>
-      <li><strong>Month 3:</strong> Launch Your First Digital Product or Service</li>
-      <li><strong>Month 6:</strong> Scale Income Through Automation & Marketing</li>
-      <li><strong>Month 12:</strong> Hit $1M Milestone!</li>
+  <section class="section">
+    <h2>What You’ll Learn</h2>
+    <ul>
+      <li>⚙️ AI tools to start businesses with $0</li>
+      <li>📈 Viral content for YouTube, TikTok, Insta</li>
+      <li>💸 Affiliate marketing, freelancing, automation</li>
+      <li>🧠 Prompt engineering for profit</li>
     </ul>
+    <button onclick="openPopup()">Join the Challenge</button>
   </section>
 
-  <!-- Testimonials -->
-  <section id="testimonials" class="testimonials">
-    <h2>What Others Are Saying About Earn With AI</h2>
-    <div class="testimonial-cards">
-      <div class="card">
-        <p>"I went from $0 to $5k/month using ChatGPT and Canva!"</p>
-        <p><strong>— John D.</strong></p>
-      </div>
-      <div class="card">
-        <p>"This roadmap changed my life. Highly recommend!"</p>
-        <p><strong>— Sarah L.</strong></p>
-      </div>
+  <section class="section">
+    <h2>Follow Us</h2>
+    <div class="socials">
+      <a href="https://instagram.com/earnwithai.1978" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://tiktok.com/@earnwithai.1978" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="https://youtube.com/@earnwithai.1978" target="_blank"><i class="fa-brands fa-youtube"></i></a>
     </div>
   </section>
 
-  <!-- Join the Community -->
-  <section id="community" class="community">
-    <h2>Be Part of the Movement</h2>
-    <p>Connect, Learn, and Grow Together.</p>
-    <div class="social-links">
-      <a href="https://instagram.com/earnwithai" target="_blank">Instagram</a>
-      <a href="https://youtube.com/earnwithai" target="_blank">YouTube</a>
-      <a href="https://tiktok.com/earnwithai" target="_blank">TikTok</a>
-      <a href="https://discord.gg/earnwithai" target="_blank">Discord</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p>&copy; 2025 Earn With AI. All rights reserved.</p>
-    <p>Results may vary. This is not financial advice. Always do your own research.</p>
+  <footer>
+    <p>&copy; 2025 Earn With AI | All Rights Reserved</p>
   </footer>
 
-  <!-- Popup for Free eBook -->
-  <div id="popup" class="popup">
+  <!-- Popup -->
+  <div class="popup" id="popup">
     <div class="popup-content">
-      <h2>Thank You!</h2>
-      <p>Check your inbox for the download link.</p>
-      <button id="close-popup">Close</button>
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>Download Free eBook</h2>
+      <input type="email" placeholder="Enter your email" />
+      <button>Get It Now</button>
     </div>
   </div>
-
-  <script src="script.js"></script>
 </body>
+
 </html>
