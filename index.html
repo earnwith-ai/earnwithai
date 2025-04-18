@@ -16,24 +16,75 @@
       --accent-teal: #00cc88;
     }
 
-    [data-theme='dark'] {
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
-    }
-
-    [data-theme='light'] {
-      background-color: var(--bg-light);
-      color: var(--text-light);
-    }
-
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       transition: background-color 0.3s, color 0.3s;
-      text-align: center;
-      padding: 0 1rem;
     }
 
+    .light-theme {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    .dark-theme {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    button {
+      padding: 1rem 2rem;
+      border: none;
+      background: linear-gradient(to right, var(--accent), var(--accent));
+      color: #fff;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="dark-theme">
+
+  <button id="toggle-btn">🌞</button>
+
+  <div>
+    <h1>Day/Night Mode</h1>
+    <p>Click the button to toggle the theme.</p>
+    <div id="countdown"></div>
+  </div>
+
+  <script>
+    // Toggle Button
+    const toggleButton = document.getElementById("toggle-btn");
+    const body = document.body;
+
+    toggleButton.addEventListener("click", () => {
+      body.classList.toggle("light-theme");
+      body.classList.toggle("dark-theme");
+      toggleButton.textContent = body.classList.contains("light-theme") ? "🌙" : "🌞";
+    });
+
+    // Countdown Timer
+    const launchDate = new Date("2025-06-01T00:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const diff = launchDate - now;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
+  </script>
+</body>
     header, section, footer {
       padding: 3rem 1rem;
     }
