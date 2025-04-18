@@ -1,12 +1,13 @@
+</script>
 const toggleButton = document.getElementById("toggle-btn");
 const body = document.body;
 
 toggleButton.addEventListener("click", () => {
     body.classList.toggle("light-theme");
     toggleButton.textContent = body.classList.contains("light-theme") ? "🌙" : "🌞";
-});
+}); 
 
- // Countdown Timer
+  // Countdown Timer
   const launchDate = new Date("2025-06-01T00:00:00").getTime();
   const countdownEl = document.getElementById("countdown");
 
@@ -21,3 +22,4 @@ toggleButton.addEventListener("click", () => {
 
     countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
   }, 1000);
+</script>
