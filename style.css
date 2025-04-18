@@ -10,6 +10,7 @@ body {
   background-color: #111111;
   color: #ffffff;
   line-height: 1.6;
+  text-align: center;
 }
 
 /* Header */
@@ -26,20 +27,21 @@ body {
 }
 
 .nav-links a {
-  color: #00ffaa;
+  color: #aaaaaa;
   text-decoration: none;
   margin: 0 1rem;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #ff00cc;
+  color: #ffffff;
 }
 
 /* Hero Section */
 .hero {
-  text-align: center;
   padding: 4rem 1rem;
+  background: linear-gradient(135deg, #1f1f1f, #111111);
+  position: relative;
 }
 
 .hero h1 {
@@ -53,8 +55,8 @@ body {
 }
 
 .hero-buttons button {
-  background-color: #00ffaa;
-  color: #111111;
+  background-color: #333333;
+  color: #ffffff;
   border: none;
   padding: 0.8rem 1.5rem;
   margin: 0 0.5rem;
@@ -70,18 +72,18 @@ body {
 .countdown-timer {
   margin-top: 2rem;
   font-size: 1.5rem;
-  color: #00cc88;
+  color: #aaaaaa;
 }
 
 .intro-video {
   margin-top: 2rem;
   max-width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
 /* How It Works */
 .how-it-works {
-  text-align: center;
   padding: 4rem 1rem;
   background-color: #1f1f1f;
 }
@@ -99,13 +101,13 @@ body {
 
 .icon {
   font-size: 2rem;
-  color: #ff00cc;
+  color: #aaaaaa;
 }
 
 /* Free eBook Offer */
 .free-ebook {
-  text-align: center;
   padding: 4rem 1rem;
+  background: linear-gradient(135deg, #1f1f1f, #111111);
 }
 
 #email-form {
@@ -119,14 +121,14 @@ body {
   padding: 0.8rem;
   width: 80%;
   max-width: 400px;
-  border: 1px solid #00ffaa;
+  border: 1px solid #aaaaaa;
   border-radius: 5px;
   background-color: #1f1f1f;
   color: #ffffff;
 }
 
 #email-form button {
-  background-color: #ff00cc;
+  background-color: #333333;
   color: #ffffff;
   border: none;
   padding: 0.8rem 1.5rem;
@@ -140,8 +142,8 @@ body {
 
 /* Roadmap */
 .roadmap {
-  text-align: center;
   padding: 4rem 1rem;
+  background-color: #1f1f1f;
 }
 
 .timeline {
@@ -156,9 +158,8 @@ body {
 
 /* Testimonials */
 .testimonials {
-  text-align: center;
   padding: 4rem 1rem;
-  background-color: #1f1f1f;
+  background: linear-gradient(135deg, #1f1f1f, #111111);
 }
 
 .testimonial-cards {
@@ -177,24 +178,23 @@ body {
 
 /* Community */
 .community {
-  text-align: center;
   padding: 4rem 1rem;
+  background-color: #1f1f1f;
 }
 
 .social-links a {
-  color: #00ffaa;
+  color: #aaaaaa;
   text-decoration: none;
   margin: 0 1rem;
   transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #ff00cc;
+  color: #ffffff;
 }
 
 /* Footer */
 .site-footer {
-  text-align: center;
   padding: 2rem;
   font-size: 0.9rem;
   color: #aaaaaa;
@@ -222,7 +222,7 @@ body {
 
 #close-popup {
   margin-top: 1rem;
-  background-color: #ff00cc;
+  background-color: #333333;
   color: #ffffff;
   border: none;
   padding: 0.5rem 1rem;
