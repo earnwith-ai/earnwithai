@@ -4,243 +4,84 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Earn with AI | Zero to $1M</title>
-  <style>
-    html {
-      font-size: 16px;
-      scroll-behavior: smooth;
-    }
-
-    @media (max-width: 600px) {
-      html {
-        font-size: 14px;
-      }
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(120deg, #0f0f0f, #1f1f1f);
-      color: #ffffff;
-      overflow-x: hidden;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #1f1f1f;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    .sticky-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background-color: #1f1f1f;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-    }
-
-    .logo {
-      width: 100px;
-      margin-bottom: 10px;
-    }
-
-    h1, h2 {
-      color: #00ffaa;
-    }
-
-    a {
-      color: #00ffaa;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-
-    button {
-      background-color: #00ffaa;
-      color: #000;
-      border: none;
-      padding: 12px 24px;
-      margin-top: 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #00cc88;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background: radial-gradient(circle at center, #222 0%, #111 100%);
-    }
-
-    .countdown {
-      margin-bottom: 20px;
-    }
-
-    iframe {
-      width: 100%;
-      max-width: 720px;
-      height: 400px;
-      border-radius: 12px;
-      border: none;
-    }
-
-    .socials i {
-      font-size: 2rem;
-      margin: 0 15px;
-      color: #00ffaa;
-      transition: all 0.3s ease;
-    }
-
-    .socials i:hover {
-      color: #00cc88;
-    }
-
-    footer {
-      background-color: #111;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
-
-    .popup {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.7);
-    }
-
-    .popup-content {
-      background-color: #222;
-      padding: 30px;
-      margin: 10% auto;
-      width: 90%;
-      max-width: 400px;
-      text-align: center;
-      border-radius: 10px;
-      position: relative;
-    }
-
-    .popup input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: none;
-      border-radius: 5px;
-    }
-
-    .close-btn {
-      position: absolute;
-      right: 20px;
-      top: 15px;
-      color: #fff;
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    @media (max-width: 480px) {
-      .popup-content {
-        margin: 20% auto;
-        padding: 20px;
-      }
-    }
-  </style>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-  <header class="sticky-header">
-    <img src="logo.png" alt="Logo" class="logo" />
+  <!-- Header Section -->
+  <header class="sticky-header" role="banner">
+    <img src="logo.svg" alt="Earn with AI Logo" class="logo" />
     <h1>Earn with AI: Zero to $1M</h1>
     <p>Learn how to earn from AI without investment. Start now.</p>
+    <button id="theme-toggle">Switch to Light Mode</button>
   </header>
 
-  <section class="hero">
-    <h2>🚀 Launching Soon</h2>
-    <div class="countdown" id="countdown">⏳ Countdown Loading...</div>
-    <button onclick="openPopup()">Get Free eBook</button>
+  <!-- Hero Section -->
+  <section class="hero" aria-labelledby="launch-heading">
+    <h2 id="launch-heading">🚀 Launching Soon</h2>
+    <div class="countdown" id="timer" aria-live="polite">⏳ Countdown Loading...</div>
+    <button id="openPopup">Get Free eBook</button>
   </section>
 
-  <section class="section">
-    <h2>What You’ll Learn</h2>
+  <!-- What You'll Learn Section -->
+  <section class="section" aria-labelledby="learn-heading">
+    <h2 id="learn-heading">What You’ll Learn</h2>
     <p>
       Discover 100% free ways to earn with AI: automation tools, affiliate marketing, video content, eBooks, and viral strategies using ChatGPT, Canva, and more.
     </p>
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen loading="lazy"></iframe>
   </section>
 
-  <section class="section socials">
-    <h2>Follow Us</h2>
+  <!-- How It Works Section -->
+  <section class="section" aria-labelledby="how-it-works-heading">
+    <h2 id="how-it-works-heading">How It Works</h2>
+    <ul>
+      <li>Step 1: Learn AI tools like ChatGPT and Canva.</li>
+      <li>Step 2: Create content for social media or blogs.</li>
+      <li>Step 3: Monetize through affiliate links or ads.</li>
+      <li>Step 4: Scale your earnings with automation.</li>
+    </ul>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section" aria-labelledby="testimonials-heading">
+    <h2 id="testimonials-heading">What Our Users Say</h2>
+    <blockquote>
+      "This course changed my life! I started earning passive income with AI in just a month."
+      <cite>- Jane Doe</cite>
+    </blockquote>
+    <blockquote>
+      "The strategies are simple yet effective. Highly recommend it!"
+      <cite>- John Smith</cite>
+    </blockquote>
+  </section>
+
+  <!-- Socials Section -->
+  <section class="section socials" aria-labelledby="socials-heading">
+    <h2 id="socials-heading">Follow Us</h2>
     <a href="#"><i class="fa-brands fa-instagram"></i></a>
     <a href="#"><i class="fa-brands fa-tiktok"></i></a>
     <a href="#"><i class="fa-brands fa-youtube"></i></a>
   </section>
 
+  <!-- Footer Section -->
   <footer>
     &copy; 2025 EarnWithAI.1978 | Zero to $1M Journey | All rights reserved.
   </footer>
 
+  <!-- Popup Modal -->
   <div class="popup" id="popup">
     <div class="popup-content">
-      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <span class="close-btn" id="closePopup">&times;</span>
       <h2>Free AI eBook</h2>
-      <input type="email" placeholder="Enter your email" />
-      <button>Download</button>
+      <input type="email" id="email-input" placeholder="Enter your email" required />
+      <button onclick="validateEmail()">Download</button>
     </div>
   </div>
 
-  <script>
-    const countdown = document.getElementById('countdown');
-    const launchDate = new Date("2025-06-01T00:00:00Z").getTime();
-
-    const updateCountdown = () => {
-      const now = new Date().getTime();
-      const distance = launchDate - now;
-
-      if (distance < 0) {
-        countdown.innerHTML = "🔥 We're live!";
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    };
-
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-
-    function openPopup() {
-      document.getElementById('popup').style.display = 'block';
-    }
-
-    function closePopup() {
-      document.getElementById('popup').style.display = 'none';
-    }
-  </script>
-
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
+  <!-- Link to JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
