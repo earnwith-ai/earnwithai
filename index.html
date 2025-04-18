@@ -1,104 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Earn with AI | Zero to $1M</title>
-  <!-- Link to CSS -->
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn how to earn $1M in 365 days using free AI tools like ChatGPT and Canva. Start your journey today!">
+  <meta property="og:title" content="Earn With AI — Zero to $1M Challenge">
+  <meta property="og:description" content="Unlock the power of free AI tools to build your income from scratch.">
+  <meta property="og:image" content="https://example.com/earn-with-ai-logo.png">
+  <title>Earn With AI — Zero to $1M Challenge</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header Section -->
-  <header class="sticky-header" role="banner">
-    <img src="logo.svg" alt="Earn with AI Logo" class="logo" />
-    <h1>Earn with AI: Zero to $1M</h1>
-    <p>Learn how to earn from AI without investment. Start now.</p>
-    <button id="theme-toggle">Switch to Light Mode</button>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">
+      <img src="logo.png" alt="Earn With AI Logo">
+    </div>
+    <nav class="nav-links">
+      <a href="#how-it-works">How It Works</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#community">Community</a>
+    </nav>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero" aria-labelledby="launch-heading">
-    <h2 id="launch-heading">🚀 Launching Soon</h2>
-    <div class="countdown" id="timer" aria-live="polite">⏳ Countdown Loading...</div>
-    <button id="openPopup">Get Free eBook</button>
-  </section>
-
-  <!-- What You'll Learn Section -->
-  <section class="section" aria-labelledby="learn-heading">
-    <h2 id="learn-heading">What You’ll Learn</h2>
-    <p>
-      Discover 100% free ways to earn with AI: automation tools, affiliate marketing, video content, eBooks, and viral strategies using ChatGPT, Canva, and more.
-    </p>
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen loading="lazy"></iframe>
+  <section class="hero">
+    <h1>Earn With AI — Zero to $1M in 365 Days</h1>
+    <p>Unlock the power of free AI tools to build your income from scratch.</p>
+    <div class="hero-buttons">
+      <button id="ebook-popup-btn">Download Free eBook</button>
+      <button onclick="scrollToSection('roadmap')">Join the Challenge</button>
+    </div>
+    <div class="countdown-timer">
+      <span id="days">00</span>d :
+      <span id="hours">00</span>h :
+      <span id="minutes">00</span>m :
+      <span id="seconds">00</span>s
+    </div>
+    <iframe class="intro-video" width="560" height="315" src="https://www.youtube.com/embed/example_video_id" frameborder="0" allowfullscreen></iframe>
   </section>
 
   <!-- How It Works Section -->
-  <section class="section" aria-labelledby="how-it-works-heading">
-    <h2 id="how-it-works-heading">How It Works</h2>
-    <ol>
-      <li>Step 1: Learn AI tools like ChatGPT and Canva.</li>
-      <li>Step 2: Create content for social media or blogs.</li>
-      <li>Step 3: Monetize through affiliate links or ads.</li>
-      <li>Step 4: Scale your earnings with automation.</li>
-    </ol>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="section" aria-labelledby="testimonials-heading">
-    <h2 id="testimonials-heading">What Our Users Say</h2>
-    <div class="testimonial">
-      <blockquote>
-        "This course changed my life! I started earning passive income with AI in just a month."
-        <cite>- Jane Doe</cite>
-      </blockquote>
-    </div>
-    <div class="testimonial">
-      <blockquote>
-        "The strategies are simple yet effective. Highly recommend it!"
-        <cite>- John Smith</cite>
-      </blockquote>
+  <section id="how-it-works" class="how-it-works">
+    <h2>How to Earn With AI in Just 3 Steps</h2>
+    <div class="steps">
+      <div class="step">
+        <i class="icon">📚</i>
+        <h3>Learn</h3>
+        <p>Master AI tools like ChatGPT, Canva, and Midjourney.</p>
+      </div>
+      <div class="step">
+        <i class="icon">✨</i>
+        <h3>Create</h3>
+        <p>Build content, products, and services effortlessly.</p>
+      </div>
+      <div class="step">
+        <i class="icon">💰</i>
+        <h3>Earn</h3>
+        <p>Monetize through affiliate marketing, automation, and more.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Socials Section -->
-  <section class="section socials" aria-labelledby="socials-heading">
-    <h2 id="socials-heading">Follow Us</h2>
-    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+  <!-- Free eBook Offer -->
+  <section class="free-ebook">
+    <h2>Your First Step to $1M: Download Our Free eBook!</h2>
+    <p>Instant Access — No Cost, No Catch.</p>
+    <form id="email-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Get My Free eBook Now</button>
+    </form>
   </section>
 
-  <!-- Blog Posts Section -->
-  <section class="section" aria-labelledby="blog-posts-heading">
-    <h2 id="blog-posts-heading">Our Latest Blog Posts</h2>
-    <div class="blog-post">
-      <h3>Unlocking AI Marketing Strategies</h3>
-      <p>Discover how AI can revolutionize your marketing efforts.</p>
-    </div>
-    <div class="blog-post">
-      <h3>Free Tools for AI Content Creation</h3>
-      <p>Explore top AI tools that don’t cost a dime.</p>
+  <!-- Success Roadmap -->
+  <section id="roadmap" class="roadmap">
+    <h2>The $0 to $1M Blueprint</h2>
+    <ul class="timeline">
+      <li><strong>Month 1:</strong> Learn AI Basics & Set Up Your Tools</li>
+      <li><strong>Month 3:</strong> Launch Your First Digital Product or Service</li>
+      <li><strong>Month 6:</strong> Scale Income Through Automation & Marketing</li>
+      <li><strong>Month 12:</strong> Hit $1M Milestone!</li>
+    </ul>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials">
+    <h2>What Others Are Saying About Earn With AI</h2>
+    <div class="testimonial-cards">
+      <div class="card">
+        <p>"I went from $0 to $5k/month using ChatGPT and Canva!"</p>
+        <p><strong>— John D.</strong></p>
+      </div>
+      <div class="card">
+        <p>"This roadmap changed my life. Highly recommend!"</p>
+        <p><strong>— Sarah L.</strong></p>
+      </div>
     </div>
   </section>
 
-  <!-- Footer Section -->
-  <footer>
-    &copy; 2025 EarnWithAI.1978 | Zero to $1M Journey | All rights reserved.
+  <!-- Join the Community -->
+  <section id="community" class="community">
+    <h2>Be Part of the Movement</h2>
+    <p>Connect, Learn, and Grow Together.</p>
+    <div class="social-links">
+      <a href="https://instagram.com/earnwithai" target="_blank">Instagram</a>
+      <a href="https://youtube.com/earnwithai" target="_blank">YouTube</a>
+      <a href="https://tiktok.com/earnwithai" target="_blank">TikTok</a>
+      <a href="https://discord.gg/earnwithai" target="_blank">Discord</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Earn With AI. All rights reserved.</p>
+    <p>Results may vary. This is not financial advice. Always do your own research.</p>
   </footer>
 
-  <!-- Popup Modal -->
-  <div class="popup" id="popup">
+  <!-- Popup for Free eBook -->
+  <div id="popup" class="popup">
     <div class="popup-content">
-      <span class="close-btn" id="closePopup">&times;</span>
-      <h2>Free AI eBook</h2>
-      <input type="email" id="email-input" placeholder="Enter your email" required />
-      <button onclick="validateEmail()">Download</button>
+      <h2>Thank You!</h2>
+      <p>Check your inbox for the download link.</p>
+      <button id="close-popup">Close</button>
     </div>
   </div>
 
-  <!-- Link to JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
