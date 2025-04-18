@@ -1,122 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Earn With AI - Zero to $1M Challenge using free AI tools like ChatGPT, Canva, Midjourney, and more.">
-    <meta property="og:title" content="Earn With AI - Zero to $1M Challenge">
-    <meta property="og:description" content="Join the Earn With AI challenge and learn how to make money using free AI tools.">
-    <meta name="keywords" content="Make money with AI, Earn from home 2025, Zero investment online business, ChatGPT money methods, How to make money with free tools, Best AI tools to earn online">
-    <title>Earn With AI — Zero to $1M Challenge</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Earn With AI — Zero to $1M Challenge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark: #111111;
+      --bg-light: #ffffff;
+      --text-dark: #ffffff;
+      --text-light: #111111;
+      --accent: #00ffaa;
+      --accent-pink: #ff00cc;
+      --accent-teal: #00cc88;
+    }
+
+    [data-theme='dark'] {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    [data-theme='light'] {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    header, section, footer {
+      padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    .hero button {
+      margin: 1rem;
+      padding: 1rem 2rem;
+      border: none;
+      font-size: 1rem;
+      background: linear-gradient(to right, var(--accent), var(--accent-pink));
+      color: #fff;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      transform: scale(1.05);
+    }
+
+    .toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .toggle input {
+      display: none;
+    }
+
+    .toggle label {
+      cursor: pointer;
+      background: #333;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      color: var(--accent);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--accent-pink);
+    }
+
+    .step-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .step-icons div {
+      font-size: 1.2rem;
+      color: var(--accent-teal);
+    }
+
+    iframe, img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+
+    footer {
+      border-top: 1px solid #444;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @media (min-width: 768px) {
+      .step-icons {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div id="theme-toggle" class="theme-toggle">
-        <button id="toggle-btn">🌙</button>
+
+  <!-- Toggle -->
+  <div class="toggle">
+    <input type="checkbox" id="themeToggle" />
+    <label for="themeToggle">🌙 / ☀️</label>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Earn With AI — Zero to $1M in 365 Days</h1>
+    <p>Make money using free AI tools. Start your journey today!</p>
+    <button>📘 Download Free eBook</button>
+    <button>🚀 Join the Challenge</button>
+    <div>
+      <p>Launching In:</p>
+      <h2 id="countdown">Loading...</h2>
     </div>
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1>Earn With AI — Zero to $1M in 365 Days</h1>
-            <p>Join the challenge and start earning with AI tools!</p>
-            <div class="cta-buttons">
-                <a href="#ebook" class="cta-btn">Download Free eBook</a>
-                <a href="#join-challenge" class="cta-btn">Join the Challenge</a>
-            </div>
-            <div id="countdown"></div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </section>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Intro Video" frameborder="0" allowfullscreen></iframe>
+  </header>
 
-        <!-- What You'll Learn / How It Works -->
-        <section class="how-it-works">
-            <h2>What You'll Learn</h2>
-            <div class="steps">
-                <div class="step">
-                    <img src="learn-icon.png" alt="Learn">
-                    <p>Learn how to use top AI tools like ChatGPT, Canva, and Midjourney.</p>
-                </div>
-                <div class="step">
-                    <img src="create-icon.png" alt="Create">
-                    <p>Create income streams using these free tools and methods.</p>
-                </div>
-                <div class="step">
-                    <img src="earn-icon.png" alt="Earn">
-                    <p>Earn through affiliate marketing, content creation, and automation.</p>
-                </div>
-            </div>
-        </section>
+  <!-- How It Works -->
+  <section>
+    <h2 class="section-title">How It Works</h2>
+    <div class="step-icons">
+      <div>📚 Learn</div>
+      <div>🎨 Create</div>
+      <div>💰 Earn</div>
+    </div>
+    <p>Using free tools like ChatGPT, Canva, Midjourney, and more.</p>
+  </section>
 
-        <!-- Free eBook Offer -->
-        <section id="ebook" class="lead-magnet">
-            <h2>Get Your Free eBook!</h2>
-            <p>Instant download with no cost, no catch.</p>
-            <form id="email-form">
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Download Now</button>
-            </form>
-        </section>
+  <!-- Roadmap -->
+  <section>
+    <h2 class="section-title">Success Roadmap</h2>
+    <p>Month 1 to 12 milestones to go from $0 to $1M</p>
+    <img src="https://via.placeholder.com/800x200?text=Roadmap+Timeline" alt="Roadmap">
+  </section>
 
-        <!-- Success Roadmap -->
-        <section class="roadmap">
-            <h2>Success Roadmap</h2>
-            <ul>
-                <li>Month 1 - Initial Steps</li>
-                <li>Month 6 - Building Momentum</li>
-                <li>Month 12 - $1M</li>
-            </ul>
-        </section>
+  <!-- Free eBook -->
+  <section>
+    <h2 class="section-title">Free eBook</h2>
+    <p>Instant download — No cost, no catch. Just pure AI money-making value!</p>
+    <button>📥 Get the Free eBook</button>
+  </section>
 
-        <!-- Social Proof / Testimonials -->
-        <section class="testimonials">
-            <h2>Success Stories</h2>
-            <p>“Featured in...” or real user success highlights.</p>
-        </section>
+  <!-- Founder -->
+  <section>
+    <h2 class="section-title">Meet the Founder</h2>
+    <img src="https://via.placeholder.com/150" alt="Founder Pic" />
+    <p>Hi, I started this from $0 and I’m documenting the journey to $1M using AI tools. Follow and build with me!</p>
+  </section>
 
-        <!-- Meet the Founder -->
-        <section class="founder">
-            <h2>Meet the Founder</h2>
-            <img src="profile.jpg" alt="Founder Image">
-            <p>My journey from $0 to success — and how you can do it too!</p>
-        </section>
+  <!-- Videos -->
+  <section>
+    <h2 class="section-title">Featured Videos</h2>
+    <iframe width="300" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1"></iframe>
+    <iframe width="300" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"></iframe>
+    <iframe width="300" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3"></iframe>
+  </section>
 
-        <!-- Featured Videos & Reels -->
-        <section class="videos">
-            <h2>Featured Videos</h2>
-            <div class="video-grid">
-                <iframe width="300" height="169" src="https://www.youtube.com/embed/your-video-id" frameborder="0"></iframe>
-                <iframe width="300" height="169" src="https://www.youtube.com/embed/your-video-id" frameborder="0"></iframe>
-                <iframe width="300" height="169" src="https://www.youtube.com/embed/your-video-id" frameborder="0"></iframe>
-            </div>
-        </section>
+  <!-- Community -->
+  <section>
+    <h2 class="section-title">Join the Community</h2>
+    <p>Connect on Telegram, Discord, Instagram, YouTube, and TikTok</p>
+    <a href="#">Telegram</a> | 
+    <a href="#">Discord</a> | 
+    <a href="#">Instagram</a> | 
+    <a href="#">TikTok</a> | 
+    <a href="#">YouTube</a>
+  </section>
 
-        <!-- Join the Community -->
-        <section class="community">
-            <h2>Join the Community</h2>
-            <div class="social-links">
-                <a href="https://t.me/earnwithai" target="_blank">Telegram</a>
-                <a href="https://discord.gg/earnwithai" target="_blank">Discord</a>
-                <a href="https://www.instagram.com/earnwithai.1978" target="_blank">Instagram</a>
-                <a href="https://www.youtube.com/earnwithai" target="_blank">YouTube</a>
-                <a href="https://www.tiktok.com/@earnwithai" target="_blank">TikTok</a>
-            </div>
-        </section>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Earn With AI | <a href="#">Privacy</a> | <a href="#">Terms</a></p>
+    <p>No investment advice. Results vary.</p>
+  </footer>
 
-        <!-- Footer -->
-        <footer>
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            <form id="email-footer">
-                <input type="email" placeholder="Sign up for updates">
-                <button type="submit">Subscribe</button>
-            </form>
-            <p>Disclaimer: No investment advice. Results vary.</p>
-        </footer>
-    </main>
+  <!-- JS: Theme Toggle + Countdown -->
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    toggle.addEventListener('change', () => {
+      document.documentElement.setAttribute('data-theme',
+        document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
+      );
+    });
 
-    <script src="script.js"></script>
+    // Countdown Timer
+    const launchDate = new Date("2025-06-01T00:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const diff = launchDate - now;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
+  </script>
 </body>
 </html>
