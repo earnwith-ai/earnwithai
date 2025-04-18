@@ -71,3 +71,12 @@ function openPopup() {
 function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
+document.getElementById('mode-toggle').addEventListener('click', function() {
+    document.body.classList.toggle('light-mode');
+    this.classList.toggle('light-mode');
+    if (document.body.classList.contains('light-mode')) {
+        this.textContent = '🌙';
+    } else {
+        this.textContent = '🌞';
+    }
+});
