@@ -64,11 +64,4 @@ themeToggle.addEventListener("click", () => {
   if (isDarkMode) {
     document.body.classList.remove("dark-mode");
     document.body.classList.add("light-mode");
-    themeToggle.textContent = "Switch to Dark Mode";
-  } else {
-    document.body.classList.remove("light-mode");
-    document.body.classList.add("dark-mode");
-    themeToggle.textContent = "Switch to Light Mode";
-  }
-  isDarkMode = !isDarkMode;
-});
+    theme
