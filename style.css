@@ -1,155 +1,90 @@
-/* Global Styles */
-* {
+/* Global styles */
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: #111111;
+    color: white;
+    transition: background-color 0.3s ease;
 }
 
-body {
-    background-color: #121212;
-    color: #fff;
-    transition: all 0.3s ease-in-out;
+h1, h2, p {
+    text-align: center;
 }
 
-/* Dark Mode / Light Mode */
-body.light-mode {
-    background-color: #f4f4f4;
-    color: #333;
+a {
+    text-decoration: none;
+    color: white;
 }
 
-.mode-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: none;
+button {
+    padding: 10px 20px;
+    background-color: #00ffaa;
     border: none;
-    font-size: 24px;
-    color: #fff;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.mode-toggle.light-mode {
-    color: #333;
+button:hover {
+    background-color: #ff00cc;
 }
 
 /* Hero Section */
 .hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: #181818;
+    padding: 50px;
+    background: linear-gradient(135deg, #00ffaa, #00cc88);
+    color: white;
 }
 
-.neon-text {
-    font-size: 3rem;
-    color: #0ff;
-    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
-    animation: glow 1.5s infinite alternate;
+.hero h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #00ffaa, 0 0 20px #00ffaa;
 }
 
-.hero-description {
-    font-size: 1.2rem;
-    margin-top: 20px;
-    color: #aaa;
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 30px;
-    background-color: #0ff;
-    color: #000;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+.cta-btn {
+    padding: 15px 30px;
+    background-color: #ff00cc;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    box-shadow: 0 0 10px #ff00cc;
 }
 
-.cta-button:hover {
-    background-color: #00cc99;
-}
-
-/* Features Section */
-.features-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-    padding: 50px 20px;
-    background: #222;
-}
-
-.feature {
-    text-align: center;
-}
-
-.feature-icon {
-    width: 50px;
-    margin-bottom: 10px;
-}
-
-.feature-title {
-    font-size: 1.5rem;
-    margin-top: 10px;
-}
-
-/* Call to Action Section */
-.cta-section {
-    text-align: center;
-    background-color: #333;
-    padding: 50px 20px;
-}
-
-.cta-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-/* Sign Up Section */
-.sign-up-section {
-    padding: 50px 20px;
-    background: #181818;
-    text-align: center;
-}
-
-.sign-up-form {
+iframe {
+    max-width: 100%;
+    height: auto;
     margin-top: 20px;
 }
 
-.sign-up-form input {
-    padding: 10px;
-    width: 250px;
-    border: 1px solid #555;
-    border-radius: 5px;
+/* Dark/Light Mode toggle */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
 }
 
-.sign-up-form button {
-    padding: 10px 20px;
-    background-color: #0ff;
-    color: #000;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin-left: 10px;
-    cursor: pointer;
+body.light-theme {
+    background-color: #ffffff;
+    color: #111111;
 }
 
-.sign-up-form button:hover {
-    background-color: #00cc99;
+body.light-theme .hero {
+    background: linear-gradient(135deg, #ff00cc, #ff88cc);
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #111;
+button {
+    background-color: #00cc88;
 }
 
-/* Animations */
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
-    }
-    100% {
-        text-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
-    }
+button:hover {
+    background-color: #00ffaa;
 }
+
+/* Add further custom styles below as needed */
+
