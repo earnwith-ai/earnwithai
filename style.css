@@ -1,13 +1,37 @@
-body {
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* General Styles */
+* {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
   background: linear-gradient(120deg, #0f0f0f, #1f1f1f);
   color: #ffffff;
   overflow-x: hidden;
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* Dark Mode */
+body.dark-mode {
+  background: linear-gradient(120deg, #0f0f0f, #1f1f1f);
+  color: #ffffff;
+}
+
+/* Light Mode */
+body.light-mode {
+  background: linear-gradient(120deg, #f5f5f5, #e0e0e0);
+  color: #333333;
+}
+
+/* Header Section */
 header {
-  background-color: #1f1f1f;
+  background-color: var(--header-bg, #1f1f1f);
   text-align: center;
   padding: 40px 20px;
 }
@@ -16,7 +40,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #1f1f1f;
+  background-color: var(--header-bg, #1f1f1f);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .logo {
@@ -25,27 +50,23 @@ header {
 }
 
 h1, h2 {
-  color: #00ffaa;
+  color: var(--accent-color, #00ffaa);
+  font-weight: 700;
 }
 
 a {
-  color: #00ffaa;
+  color: var(--accent-color, #00ffaa);
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-.section {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
-
+/* Button Styles */
 button {
-  background-color: #00ffaa;
+  background-color: var(--accent-color, #00ffaa);
   color: #000;
   border: none;
   padding: 12px 24px;
@@ -53,12 +74,16 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-  background-color: #00cc88;
+  background-color: var(--accent-hover, #00cc88);
+  transform: translateY(-2px);
 }
 
+/* Hero Section */
 .hero {
   text-align: center;
   padding: 60px 20px;
@@ -67,6 +92,15 @@ button:hover {
 
 .countdown {
   margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+/* Section Styles */
+.section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
 }
 
 iframe {
@@ -77,19 +111,28 @@ iframe {
   border: none;
 }
 
+/* Social Icons */
 .socials i {
   font-size: 2rem;
   margin: 0 15px;
-  color: #00ffaa;
+  color: var(--accent-color, #00ffaa);
+  transition: all 0.3s ease;
 }
 
+.socials i:hover {
+  color: var(--accent-hover, #00cc88);
+  transform: scale(1.1);
+}
+
+/* Footer Section */
 footer {
-  background-color: #111;
+  background-color: var(--footer-bg, #111);
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
 }
 
+/* Popup Modal */
 .popup {
   display: none;
   position: fixed;
@@ -98,17 +141,18 @@ footer {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .popup-content {
-  background-color: #222;
+  background-color: var(--popup-bg, #222);
   padding: 30px;
   margin: 10% auto;
   width: 90%;
   max-width: 400px;
   text-align: center;
   border-radius: 10px;
+  position: relative;
 }
 
 .popup input {
@@ -126,4 +170,27 @@ footer {
   color: #fff;
   font-size: 24px;
   cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section {
+    padding: 20px;
+  }
+
+  iframe {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
 }
