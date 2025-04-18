@@ -1,41 +1,35 @@
 // Countdown Timer
-const launchDate = new Date("January 1, 2025 00:00:00").getTime();
+const timer = document.getElementById("timer");
+
+// Set the goal date (365 days from launch)
+const launchDate = new Date("April 1, 2025"); // You can change this
+const targetDate = new Date(launchDate.getTime() + 365 * 24 * 60 * 60 * 1000);
 
 function updateCountdown() {
   const now = new Date().getTime();
-  const timeLeft = launchDate - now;
+  const distance = targetDate - now;
 
-  if (timeLeft <= 0) {
-    document.getElementById("days").innerText = "00";
-    document.getElementById("hours").innerText = "00";
-    document.getElementById("minutes").innerText = "00";
-    document.getElementById("seconds").innerText = "00";
+  if (distance <= 0) {
+    timer.innerHTML = "We hit $1M! 🎉";
     return;
   }
 
-  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((distance / (1000 * 60)) % 60);
+  const seconds = Math.floor((distance / 1000) % 60);
 
-  document.getElementById("days").innerText = String(days).padStart(2, "0");
-  document.getElementById("hours").innerText = String(hours).padStart(2, "0");
-  document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
-  document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
+  timer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
 
 setInterval(updateCountdown, 1000);
+updateCountdown();
 
-// Scroll to Section
-function scrollToSection(sectionId) {
-  document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+// Popup Logic
+function openPopup() {
+  document.getElementById("popup").style.display = "block";
 }
 
-// Popup for Free eBook
-document.getElementById("ebook-popup-btn").addEventListener("click", () => {
-  document.getElementById("popup").style.display = "flex";
-});
-
-document.getElementById("close-popup").addEventListener("click", () => {
+function closePopup() {
   document.getElementById("popup").style.display = "none";
-});
+}
