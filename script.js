@@ -1,67 +1,41 @@
-// Countdown Timer for 365 days from Jan 1, 2025
-const timer = document.getElementById("timer");
-const endDate = new Date("2025-12-31T23:59:59").getTime();
+// Countdown Timer
+const launchDate = new Date("January 1, 2025 00:00:00").getTime();
 
-setInterval(() => {
+function updateCountdown() {
   const now = new Date().getTime();
-  const distance = endDate - now;
+  const timeLeft = launchDate - now;
 
-  if (distance < 0) {
-    timer.innerHTML = "🔥 We're live!";
+  if (timeLeft <= 0) {
+    document.getElementById("days").innerText = "00";
+    document.getElementById("hours").innerText = "00";
+    document.getElementById("minutes").innerText = "00";
+    document.getElementById("seconds").innerText = "00";
     return;
   }
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-  timer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-}, 1000);
-
-// Popup Modal Functionality
-const popup = document.getElementById("popup");
-const openPopupButton = document.getElementById("openPopup");
-const closePopupButton = document.getElementById("closePopup");
-
-// Open Popup
-openPopupButton.addEventListener("click", () => {
-  popup.style.display = "block";
-});
-
-// Close Popup
-closePopupButton.addEventListener("click", () => {
-  popup.style.display = "none";
-});
-
-// Close Popup when clicking outside the modal
-window.onclick = (e) => {
-  if (e.target === popup) {
-    popup.style.display = "none";
-  }
-};
-
-// Email Validation for Popup Form
-function validateEmail() {
-  const emailInput = document.getElementById("email-input");
-  const email = emailInput.value.trim();
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  if (!emailPattern.test(email)) {
-    alert("Please enter a valid email address.");
-    return;
-  }
-
-  alert("Thank you! Your eBook will be sent shortly.");
-  popup.style.display = "none";
+  document.getElementById("days").innerText = String(days).padStart(2, "0");
+  document.getElementById("hours").innerText = String(hours).padStart(2, "0");
+  document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
+  document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
 }
 
-// Theme Toggle (Dark/Light Mode)
-const themeToggle = document.getElementById("theme-toggle");
-let isDarkMode = true; // Default to dark mode
+setInterval(updateCountdown, 1000);
 
-themeToggle.addEventListener("click", () => {
-  if (isDarkMode) {
-    document.body.classList.remove("dark-mode");
-    document.body.classList.add("light-mode");
-    theme
+// Scroll to Section
+function scrollToSection(sectionId) {
+  document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+}
+
+// Popup for Free eBook
+document.getElementById("ebook-popup-btn").addEventListener("click", () => {
+  document.getElementById("popup").style.display = "flex";
+});
+
+document.getElementById("close-popup").addEventListener("click", () => {
+  document.getElementById("popup").style.display = "none";
+});
