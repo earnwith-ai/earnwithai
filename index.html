@@ -1,223 +1,139 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Earn With AI — Zero to $1M Challenge</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earn With AI — Zero to $1M</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg-dark: #111111;
-      --bg-light: #ffffff;
-      --text-dark: #ffffff;
-      --text-light: #111111;
+      --bg: #111;
+      --text: #fff;
       --accent: #00ffaa;
       --accent-pink: #ff00cc;
       --accent-teal: #00cc88;
     }
-
-    [data-theme='dark'] {
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
-    }
-
-    [data-theme='light'] {
-      background-color: var(--bg-light);
-      color: var(--text-light);
-    }
-
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      transition: background-color 0.3s, color 0.3s;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
       text-align: center;
-      padding: 0 1rem;
+      padding: 2rem 1rem;
+      transition: background 0.4s, color 0.4s;
     }
-
-    header, section, footer {
-      padding: 3rem 1rem;
+    h1, h2 {
+      font-weight: 700;
+      text-shadow: 0 0 10px var(--accent);
     }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: var(--accent);
+    section {
+      margin: 3rem 0;
     }
-
-    .hero button {
-      margin: 1rem;
-      padding: 1rem 2rem;
-      border: none;
-      font-size: 1rem;
-      background: linear-gradient(to right, var(--accent), var(--accent-pink));
-      color: #fff;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-
-    .hero button:hover {
-      transform: scale(1.05);
-    }
-
-    .toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 1000;
-    }
-
-    .toggle input {
-      display: none;
-    }
-
-    .toggle label {
-      cursor: pointer;
-      background: #333;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      color: var(--accent);
-    }
-
     .section-title {
       font-size: 2rem;
       margin-bottom: 1rem;
-      color: var(--accent-pink);
     }
-
-    .step-icons {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      align-items: center;
+    a {
+      color: var(--accent);
+      text-decoration: none;
     }
-
-    .step-icons div {
-      font-size: 1.2rem;
-      color: var(--accent-teal);
+    .toggle-theme {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--accent);
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 8px;
+      z-index: 999;
     }
-
-    iframe, img {
-      max-width: 100%;
-      border-radius: 12px;
-    }
-
     footer {
-      border-top: 1px solid #444;
+      margin-top: 4rem;
       font-size: 0.9rem;
       color: #aaa;
-    }
-
-    @media (min-width: 768px) {
-      .step-icons {
-        flex-direction: row;
-        justify-content: center;
-      }
     }
   </style>
 </head>
 <body>
-
-  <!-- Toggle -->
-  <div class="toggle">
-    <input type="checkbox" id="themeToggle" />
-    <label for="themeToggle">🌙 / ☀️</label>
-  </div>
+  <button class="toggle-theme" onclick="toggleTheme()">Toggle Theme</button>
 
   <!-- Hero Section -->
-  <header class="hero">
-    <h1>Earn With AI — Zero to $1M in 365 Days</h1>
-    <p>Make money using free AI tools. Start your journey today!</p>
-    <button>📘 Download Free eBook</button>
-    <button>🚀 Join the Challenge</button>
-    <div>
-      <p>Launching In:</p>
-      <h2 id="countdown">Loading...</h2>
-    </div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Intro Video" frameborder="0" allowfullscreen></iframe>
-  </header>
+  <section>
+    <h1 class="section-title">Earn With AI — Zero to $1M in 365 Days</h1>
+    <p>Join our challenge to build a $1M business using FREE AI tools</p>
+    <p><strong>📘 Download our Free eBook & Join the Journey</strong></p>
+    <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Intro Video" frameborder="0" allowfullscreen></iframe>
+  </section>
 
   <!-- How It Works -->
   <section>
     <h2 class="section-title">How It Works</h2>
-    <div class="step-icons">
-      <div>📚 Learn</div>
-      <div>🎨 Create</div>
-      <div>💰 Earn</div>
-    </div>
-    <p>Using free tools like ChatGPT, Canva, Midjourney, and more.</p>
-  </section>
-
-  <!-- Roadmap -->
-  <section>
-    <h2 class="section-title">Success Roadmap</h2>
-    <p>Month 1 to 12 milestones to go from $0 to $1M</p>
-    <img src="https://via.placeholder.com/800x200?text=Roadmap+Timeline" alt="Roadmap">
+    <p>💡 Learn → 🎨 Create → 💰 Earn</p>
+    <p>We teach you how to use tools like ChatGPT, Canva, Pictory, Notion AI</p>
+    <p>Earn from affiliate marketing, digital products, AI automation & more</p>
   </section>
 
   <!-- Free eBook -->
   <section>
-    <h2 class="section-title">Free eBook</h2>
-    <p>Instant download — No cost, no catch. Just pure AI money-making value!</p>
-    <button>📥 Get the Free eBook</button>
+    <h2 class="section-title">🎁 Free eBook</h2>
+    <p>“Zero to $1M in 365 Days — AI Blueprint”</p>
+    <p>✅ Instant Download | 📩 No Cost | 🔒 No Catch</p>
+    <button onclick="alert('eBook download coming soon!')" style="padding: 1rem 2rem; background: var(--accent-pink); border: none; border-radius: 10px; color: white; font-weight: bold;">Download Now</button>
   </section>
 
-  <!-- Founder -->
+  <!-- Success Roadmap -->
   <section>
-    <h2 class="section-title">Meet the Founder</h2>
-    <img src="https://via.placeholder.com/150" alt="Founder Pic" />
-    <p>Hi, I started this from $0 and I’m documenting the journey to $1M using AI tools. Follow and build with me!</p>
+    <h2 class="section-title">🛣️ Roadmap to $1M</h2>
+    <p>Month 1: Setup & Learn</p>
+    <p>Month 2-6: Build Content + Grow Audience</p>
+    <p>Month 7-12: Monetize + Scale with AI</p>
   </section>
 
-  <!-- Videos -->
+  <!-- Featured Videos -->
   <section>
-    <h2 class="section-title">Featured Videos</h2>
-    <iframe width="300" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1"></iframe>
-    <iframe width="300" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"></iframe>
-    <iframe width="300" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3"></iframe>
+    <h2 class="section-title">🎬 Featured Videos</h2>
+    <p>🔥 Trending TikToks + YouTube Shorts</p>
+    <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Featured Video" frameborder="0" allowfullscreen></iframe>
   </section>
 
-  <!-- Community -->
+  <!-- Join Community -->
   <section>
-    <h2 class="section-title">Join the Community</h2>
-    <p>Connect on Telegram, Discord, Instagram, YouTube, and TikTok</p>
-    <a href="#">Telegram</a> | 
-    <a href="#">Discord</a> | 
-    <a href="#">Instagram</a> | 
-    <a href="#">TikTok</a> | 
-    <a href="#">YouTube</a>
+    <h2 class="section-title">🤝 Join the Community</h2>
+    <p>Follow us for daily content, updates & tips</p>
+    <div style="font-size: 1.5rem; margin: 1rem 0;">
+      <a href="https://www.youtube.com/@earnwithai.1978" target="_blank" style="margin: 0 1rem;">▶️ YouTube</a>
+      <a href="https://www.instagram.com/earnwithai.1978" target="_blank" style="margin: 0 1rem;">📸 Instagram</a>
+      <a href="https://www.tiktok.com/@earnwithai.1978" target="_blank" style="margin: 0 1rem;">🎵 TikTok</a>
+    </div>
+    <p style="margin-top: 1rem;">📧 Email us: <a href="mailto:earnwithai.1978@gmail.com">earnwithai.1978@gmail.com</a></p>
   </section>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 Earn With AI | <a href="#">Privacy</a> | <a href="#">Terms</a></p>
     <p>No investment advice. Results vary.</p>
+    <div style="margin-top: 1rem;">
+      <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--accent);">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16h6M3 6l3.6 12.59A2 2 0 008.5 20h7a2 2 0 001.9-1.41L21 6H3z"/>
+      </svg>
+      <p style="font-size: 0.85rem; color: #777;">Built with ❤️ for dreamers</p>
+    </div>
   </footer>
 
-  <!-- JS: Theme Toggle + Countdown -->
   <script>
-    const toggle = document.getElementById('themeToggle');
-    toggle.addEventListener('change', () => {
-      document.documentElement.setAttribute('data-theme',
-        document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
-      );
-    });
-
-    // Countdown Timer
-    const launchDate = new Date("2025-06-01T00:00:00").getTime();
-    const countdownEl = document.getElementById("countdown");
-
-    setInterval(() => {
-      const now = new Date().getTime();
-      const diff = launchDate - now;
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-      countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }, 1000);
+    function toggleTheme() {
+      const root = document.documentElement;
+      const isDark = getComputedStyle(root).getPropertyValue('--bg') === '#111';
+      if (isDark) {
+        root.style.setProperty('--bg', '#fefefe');
+        root.style.setProperty('--text', '#111');
+      } else {
+        root.style.setProperty('--bg', '#111');
+        root.style.setProperty('--text', '#fff');
+      }
+    }
   </script>
 </body>
 </html>
