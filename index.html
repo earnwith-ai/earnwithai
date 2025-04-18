@@ -1,71 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Earn With AI | $1M in 365 Days</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="scripts.js" defer></script>
-  <script src="https://kit.fontawesome.com/a2e8f1fdb3.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EarnWithAI</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body>
+    <!-- Toggle Dark/Light Mode -->
+    <button id="mode-toggle" class="mode-toggle">🌙</button>
 
-<body class="dark-mode">
-  <header class="sticky-header">
-    <img src="logo.png" alt="Earn With AI Logo" class="logo" />
-    <h1 class="main-title">Earn With AI</h1>
-    <p>Join us on a mission to earn $1,000,000 in 365 days using only FREE AI tools & strategies.</p>
-    <button onclick="openPopup()">Get Free eBook</button>
-    <button onclick="toggleTheme()" class="toggle-btn">Toggle Theme</button>
-  </header>
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1 class="neon-text">EarnWithAI: Master AI Trading & Investing</h1>
+        <p class="hero-description">Unlock the potential of AI in crypto trading with our advanced tools and strategies!</p>
+        <a href="#features" class="cta-button">Explore Features</a>
+    </header>
 
-  <section class="hero">
-    <h2>Why Earn With AI?</h2>
-    <p>We’re not selling dreams. We’re building a movement. Zero investment. Zero BS. 100% Execution.</p>
-    <div class="countdown">
-      <h3>Countdown to $1M</h3>
-      <div id="timer"></div>
-    </div>
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-  </section>
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="feature">
+            <img src="ai-icon.svg" alt="AI Icon" class="feature-icon">
+            <h2 class="feature-title">AI Trading Insights</h2>
+            <p>Leverage AI-driven analysis for smarter trading decisions.</p>
+        </div>
+        <div class="feature">
+            <img src="crypto-icon.svg" alt="Crypto Icon" class="feature-icon">
+            <h2 class="feature-title">Crypto Market Analysis</h2>
+            <p>Stay updated with real-time market trends and news.</p>
+        </div>
+        <div class="feature">
+            <img src="portfolio-icon.svg" alt="Portfolio Icon" class="feature-icon">
+            <h2 class="feature-title">Portfolio Optimization</h2>
+            <p>Optimize your portfolio using advanced AI algorithms.</p>
+        </div>
+    </section>
 
-  <section class="section">
-    <h2>What You’ll Learn</h2>
-    <ul>
-      <li>⚙️ AI tools to start businesses with $0</li>
-      <li>📈 Viral content for YouTube, TikTok, Insta</li>
-      <li>💸 Affiliate marketing, freelancing, automation</li>
-      <li>🧠 Prompt engineering for profit</li>
-    </ul>
-    <button onclick="openPopup()">Join the Challenge</button>
-  </section>
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <h2>Start Earning with AI Today!</h2>
+        <a href="#sign-up" class="cta-button">Join Now</a>
+    </section>
 
-  <section class="section">
-    <h2>Follow Us</h2>
-    <div class="socials">
-      <a href="https://instagram.com/earnwithai.1978" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://tiktok.com/@earnwithai.1978" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-      <a href="https://youtube.com/@earnwithai.1978" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-    </div>
-  </section>
+    <!-- Sign Up Section -->
+    <section id="sign-up" class="sign-up-section">
+        <h2>Sign Up for Early Access</h2>
+        <form class="sign-up-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="cta-button">Sign Up</button>
+        </form>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Earn With AI | All Rights Reserved</p>
-  </footer>
+    <footer>
+        <p>&copy; 2025 EarnWithAI | All rights reserved.</p>
+    </footer>
 
-  <!-- Popup -->
-  <div class="popup" id="popup">
-    <div class="popup-content">
-      <span class="close-btn" onclick="closePopup()">&times;</span>
-      <h2>Download Free eBook</h2>
-      <input type="email" placeholder="Enter your email" />
-      <button>Get It Now</button>
-    </div>
-  </div>
+    <script src="script.js"></script>
 </body>
-
 </html>
