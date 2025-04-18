@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Earn With AI — Zero to $1M Challenge</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
   <style>
     :root {
       --bg-dark: #111111;
@@ -33,7 +32,6 @@
       transition: background-color 0.3s, color 0.3s;
       text-align: center;
       padding: 0 1rem;
-      background-image: url('https://www.transparenttextures.com/patterns/graphy-dark.png');
     }
 
     header, section, footer {
@@ -44,7 +42,6 @@
       font-size: 2.5rem;
       margin-bottom: 1rem;
       color: var(--accent);
-      animation: glow 2s ease-in-out infinite alternate;
     }
 
     .hero button {
@@ -93,14 +90,11 @@
       flex-direction: column;
       gap: 1rem;
       align-items: center;
-      font-size: 1.2rem;
     }
 
     .step-icons div {
+      font-size: 1.2rem;
       color: var(--accent-teal);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
     }
 
     iframe, img {
@@ -114,30 +108,10 @@
       color: #aaa;
     }
 
-    .social-icons a {
-      margin: 0 10px;
-      font-size: 1.5rem;
-      color: var(--accent);
-      transition: 0.3s;
-    }
-
-    .social-icons a:hover {
-      color: var(--accent-pink);
-    }
-
     @media (min-width: 768px) {
       .step-icons {
         flex-direction: row;
         justify-content: center;
-      }
-    }
-
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent);
-      }
-      to {
-        text-shadow: 0 0 20px var(--accent-pink), 0 0 30px var(--accent-pink);
       }
     }
   </style>
@@ -151,25 +125,27 @@
   </div>
 
   <!-- Hero Section -->
-  <header class="hero">
-    <h1>Earn With AI — Zero to $1M in 365 Days</h1>
-    <p>Make money using free AI tools. Start your journey today!</p>
-    <button>📘 Download Free eBook</button>
-    <button>🚀 Join the Challenge</button>
-    <div>
-      <p>Launching In:</p>
-      <h2 id="countdown">Loading...</h2>
-    </div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Intro Video" frameborder="0" allowfullscreen></iframe>
-  </header>
+  <!-- Hero Section -->
+<header class="hero">
+  <img src="YOUR_LOGO_URL_HERE" alt="Site Logo" style="max-width: 150px; margin-bottom: 1rem;" />
+  <h1>Earn With AI — Zero to $1M in 365 Days</h1>
+  <p>Make money using free AI tools. Start your journey today!</p>
+  <button>📘 Download Free eBook</button>
+  <button>🚀 Join the Challenge</button>
+  <div>
+    <p>Launching In:</p>
+    <h2 id="countdown">Loading...</h2>
+  </div>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Intro Video" frameborder="0" allowfullscreen></iframe>
+</header>
 
   <!-- How It Works -->
   <section>
     <h2 class="section-title">How It Works</h2>
     <div class="step-icons">
-      <div><i class="fas fa-book-open"></i> Learn</div>
-      <div><i class="fas fa-brain"></i> Create</div>
-      <div><i class="fas fa-dollar-sign"></i> Earn</div>
+      <div>📚 Learn</div>
+      <div>🎨 Create</div>
+      <div>💰 Earn</div>
     </div>
     <p>Using free tools like ChatGPT, Canva, Midjourney, and more.</p>
   </section>
@@ -204,35 +180,21 @@
   </section>
 
   <!-- Community -->
-  <!-- Community -->
-<section>
-  <h2 class="section-title">Join the Community</h2>
-  <p>Follow us for daily content, updates & tips</p>
-  <div style="font-size: 1.5rem; margin: 1rem 0;">
-    <a href="https://www.youtube.com/@earnwithai.1978" target="_blank" style="margin: 0 1rem; color: var(--accent); text-decoration: none;">
-      ▶️ YouTube
-    </a>
-    <a href="https://www.instagram.com/earnwithai.1978" target="_blank" style="margin: 0 1rem; color: var(--accent-pink); text-decoration: none;">
-      📸 Instagram
-    </a>
-    <a href="https://www.tiktok.com/@earnwithai.1978" target="_blank" style="margin: 0 1rem; color: var(--accent-teal); text-decoration: none;">
-      🎵 TikTok
-    </a>
-  </div>
-  <p style="margin-top: 1rem;">📧 Email us: <a href="mailto:earnwithai.1978@gmail.com" style="color: var(--accent); text-decoration: underline;">earnwithai.1978@gmail.com</a></p>
-</section>
+  <section>
+    <h2 class="section-title">Join the Community</h2>
+    <p>Connect on Telegram, Discord, Instagram, YouTube, and TikTok</p>
+    <a href="#">Telegram</a> | 
+    <a href="#">Discord</a> | 
+    <a href="#">Instagram</a> | 
+    <a href="#">TikTok</a> | 
+    <a href="#">YouTube</a>
+  </section>
 
-<!-- Footer -->
-<footer>
-  <p>© 2025 Earn With AI | <a href="#">Privacy</a> | <a href="#">Terms</a></p>
-  <p>No investment advice. Results vary.</p>
-  <div style="margin-top: 1rem;">
-    <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--accent);">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16h6M3 6l3.6 12.59A2 2 0 008.5 20h7a2 2 0 001.9-1.41L21 6H3z"/>
-    </svg>
-    <p style="font-size: 0.85rem; color: #777;">Built with ❤️ for dreamers</p>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Earn With AI | <a href="#">Privacy</a> | <a href="#">Terms</a></p>
+    <p>No investment advice. Results vary.</p>
+  </footer>
 
   <!-- JS: Theme Toggle + Countdown -->
   <script>
