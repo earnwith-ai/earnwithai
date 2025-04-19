@@ -7,13 +7,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg-dark: #111111;
-      --bg-light: #ffffff;
-      --text-dark: #ffffff;
-      --text-light: #111111;
+      --bg-dark: #111;
+      --bg-light: #fff;
+      --text-dark: #fff;
+      --text-light: #111;
       --accent: #00ffaa;
       --accent-pink: #ff00cc;
       --accent-teal: #00cc88;
+    }
+
+    html[data-theme="dark"] {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    html[data-theme="light"] {
+      background-color: var(--bg-light);
+      color: var(--text-light);
     }
 
     body {
@@ -22,94 +32,18 @@
       transition: background-color 0.3s, color 0.3s;
     }
 
-    .light-theme {
-      background-color: var(--bg-light);
-      color: var(--text-light);
-    }
-
-    .dark-theme {
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
-    }
-
     button {
       padding: 1rem 2rem;
       border: none;
-      background: linear-gradient(to right, var(--accent), var(--accent));
-      color: #fff;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      transform: scale(1.05);
-    }
-  </style>
-</head>
-<body class="dark-theme">
-
-  <button id="toggle-btn">🌞</button>
-
-  <div>
-    <h1>Day/Night Mode</h1>
-    <p>Click the button to toggle the theme.</p>
-    <div id="countdown">Loading...</div>
-  </div>
-
-  <script>
-    // Toggle Button
-    const toggleButton = document.getElementById("toggle-btn");
-    const body = document.body;
-
-    toggleButton.addEventListener("click", () => {
-      body.classList.toggle("light-theme");
-      body.classList.toggle("dark-theme");
-      toggleButton.textContent = body.classList.contains("light-theme") ? "🌙" : "🌞";
-    });
-
-    // Countdown Timer
-    const launchDate = new Date("2025-06-01T00:00:00").getTime();
-    const countdownEl = document.getElementById("countdown");
-
-    setInterval(() => {
-      const now = new Date().getTime();
-      const diff = launchDate - now;
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-      countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }, 1000);
-  </script>
-
-</body>
-  
-    header, section, footer {
-      padding: 3rem 1rem;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: var(--accent);
-    }
-
-    .hero button {
-      margin: 1rem;
-      padding: 1rem 2rem;
-      border: none;
-      font-size: 1rem;
       background: linear-gradient(to right, var(--accent), var(--accent-pink));
       color: #fff;
       cursor: pointer;
       border-radius: 8px;
       transition: 0.3s;
+      font-size: 1rem;
     }
 
-    .hero button:hover {
+    button:hover {
       transform: scale(1.05);
     }
 
@@ -120,15 +54,21 @@
       z-index: 1000;
     }
 
-    .toggle input {
-      display: none;
-    }
-
     .toggle label {
       cursor: pointer;
       background: #333;
       padding: 0.5rem 1rem;
       border-radius: 20px;
+      color: var(--accent);
+    }
+
+    header, section, footer {
+      padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
       color: var(--accent);
     }
 
@@ -159,6 +99,7 @@
       border-top: 1px solid #444;
       font-size: 0.9rem;
       color: #aaa;
+      text-align: center;
     }
 
     @media (min-width: 768px) {
@@ -166,6 +107,29 @@
         flex-direction: row;
         justify-content: center;
       }
+    }
+
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .tool-card {
+      background: #222;
+      padding: 1.5rem;
+      border-radius: 12px;
+      max-width: 300px;
+    }
+
+    html[data-theme="light"] .tool-card {
+      background: #f5f5f5;
+    }
+
+    .tool-card h3 {
+      margin-top: 0;
+      color: var(--accent);
     }
   </style>
 </head>
@@ -179,7 +143,7 @@
 
   <!-- Hero Section -->
   <header class="hero">
-     <img src="logo.png" alt="Site Logo" style="max-width: 200px; margin-bottom: 1rem;" />
+    <img src="logo.png" alt="Site Logo" style="max-width: 200px; margin-bottom: 1rem;" />
     <h1>Earn With AI — Zero to $1M in 365 Days</h1>
     <p>Make money using free AI tools. Start your journey today!</p>
     <button>📘 Download Free eBook</button>
@@ -243,7 +207,8 @@
     <p style="margin-top: 1rem;">📧 Email us: <a href="mailto:earnwithai.1978@gmail.com">earnwithai.1978@gmail.com</a></p>
   </section>
 
-<section class="section" id="tools">
+  <!-- Tools -->
+  <section class="section" id="tools">
     <h2>Recommended AI Tools</h2>
     <div class="tools">
       <div class="tool-card">
@@ -276,30 +241,37 @@
     <p>No investment advice. Results vary.</p>
   </footer>
 
-  <!-- JS: Theme Toggle + Countdown -->
+  <!-- Scripts -->
   <script>
-    const toggle = document.getElementById('themeToggle');
-    toggle.addEventListener('change', () => {
-      document.documentElement.setAttribute('data-theme',
-        document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
-      );
+    // Theme Toggle
+    document.getElementById("themeToggle").addEventListener("change", () => {
+      const current = document.documentElement.getAttribute("data-theme");
+      document.documentElement.setAttribute("data-theme", current === "dark" ? "light" : "dark");
     });
 
-    // Countdown Timer
-    const launchDate = new Date("2025-06-01T00:00:00").getTime();
+    // Countdown
     const countdownEl = document.getElementById("countdown");
+    const launchDate = new Date("2025-06-01T00:00:00Z").getTime();
 
-    setInterval(() => {
+    function updateCountdown() {
       const now = new Date().getTime();
       const diff = launchDate - now;
+
+      if (diff <= 0) {
+        countdownEl.innerHTML = "🚀 Launched!";
+        return;
+      }
 
       const days = Math.floor(diff / (1000 * 60 * 60 * 24));
       const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-      countdownEl.innerHTML = ${days}d ${hours}h ${minutes}m ${seconds}s;
-    }, 1000);
+      countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
   </script>
 </body>
 </html>
